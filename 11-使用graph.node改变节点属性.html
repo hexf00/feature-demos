@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="mountNode"></div>
+    <script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g6-3.1.0/build/g6.js"></script>
+
+    <script>
+        const data = {
+            nodes: [
+                {
+                    id: 'node-modelRect',
+                    x: 200,
+                    y: 100,
+                    description: '描述文本xxxxxxxxxxx',
+                    shape: 'modelRect',
+                    label: 'modelRect'
+                }
+            ]
+        };
+
+        const graph = new G6.Graph({
+            container: 'mountNode',
+            width: 500,
+            height: 500,
+            // 节点在各状态下的样式
+            nodeStateStyles: {
+                // hover 状态为 true 时的样式
+                hover: {
+                    fill: 'lightsteelblue'
+                },
+                // click 状态为 true 时的样式
+                click: {
+                    stroke: '#000',
+                    lineWidth: 3
+                }
+            },
+            modes: {
+                default: ['drag-node', 'drag-canvas', 'zoom-canvas']
+            }
+        });
+        graph.data(data);
+
+        graph.node(node => {
+            if (node.id == 'node-modelRect') {
+                node.description = "342424"
+                return node;
+            }
+            return node;
+        });
+        // 监听鼠标点击节点
+        graph.on('node:click', e => {
+            // 先将所有当前有 click 状态的节点的 click 状态置为 false
+            const clickNodes = graph.findAllByState('node', 'click');
+            clickNodes.forEach(cn => {
+                graph.setItemState(cn, 'click', false);
+            });
+            const nodeItem = e.item;
+            // 设置目标节点的 click 状态 为 true
+            graph.setItemState(nodeItem, 'click', true);
+        });
+        graph.render();
+    </script>
+</body>
+
+</html>

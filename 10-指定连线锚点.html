@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    注：实际测试发现矩形的anchorPoints存在BUG
+    <div id="mountNode"></div>
+    <script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g6-3.1.0/build/g6.js"></script>
+    
+    <script>
+        const data = {
+            nodes: [
+                {
+                    id: 'node1',
+                    label: 'node1',
+                    x: 100,
+                    y: 200,
+                    // 该节点可选的连接点集合，该点有两个可选的连接点
+                    anchorPoints: [
+
+                        [0.5, 0],
+                        [0.5, 1],
+                    ],
+                    size: [50, 50],
+                },
+                {
+                    id: 'node2',
+                    label: 'node2',
+                    x: 200,
+                    y: 200,
+
+                    size: [50, 50],
+                    // 该节点可选的连接点集合，该点有两个可选的连接点
+                    anchorPoints: [
+
+                        [0, 0.5],
+                        [0.5, 0],
+                    ],
+                },
+            ],
+            edges: [
+                {
+                    source: 'node1',
+                    target: 'node2',
+                    // 该边连入 source 点的第 0 个 anchorPoint，
+                    sourceAnchor: 0,
+                    // 该边连入 target 点的第 0 个 anchorPoint，
+                    targetAnchor: 0,
+                    style: {
+                        endArrow: true,
+                    },
+                },
+                {
+                    source: 'node2',
+                    target: 'node1',
+                    // 该边连入 source 点的第 1 个 anchorPoint，
+                    sourceAnchor: 1,
+                    // 该边连入 source 点的第 1 个 anchorPoint，
+                    targetAnchor: 1,
+                    style: {
+                        endArrow: true,
+                    },
+                },
+            ],
+        };
+
+        const graph = new G6.Graph({
+            container: 'mountNode',
+            // renderer: 'svg',
+            width: 500,
+            height: 500,
+            // fitView: true,
+            modes: {
+                default: ['drag-node', 'drag-canvas', 'zoom-canvas']
+            },
+            defaultNode: {
+                shape: 'diamond',
+                // 其他配置
+                linkPoints: {
+                    top: true,
+                    bottom: true,
+                    left: true,
+                    right: true,
+                    size: 5,
+                    fill: '#fff',
+                },
+            },
+        });
+        graph.data(data);
+        graph.render();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>03-基本配置项</title>
+</head>
+
+<body>
+
+  <div id="mountNode"></div>
+
+  <script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g6-3.1.0/build/g6.js"></script>
+  <script>
+    // 定义数据源
+    const data = {
+      // 点集
+      //nodes 数组中包含节点对象，唯一的 id 是每个节点对象中必要的属性，x、 y 用于定位；
+      nodes: [{
+        id: 'node1', // 节点的唯一标识
+        x: 100, // 节点横坐标
+        y: 200, // 节点纵坐标
+        label: '起始点' // 节点文本
+      }, {
+        id: 'node2',
+        x: 300,
+        y: 200,
+        label: '目标点'
+      }],
+      // 边集
+      edges: [
+        // 表示一条从 node1 节点连接到 node2 节点的边
+        {
+          source: 'node1',  // 起始点 id
+          target: 'node2',  // 目标点 id
+          label: '关系描述'   // 边的文本
+        }
+      ]
+    };
+
+    // 创建 G6 图实例
+    const graph = new G6.Graph({
+      container: 'mountNode', // 指定图画布的容器 id，与第 9 行的容器对应
+      // 画布宽高
+      width: 800,
+      height: 500,
+
+
+      // 完整API详细见 : https://g6.antv.vision/zh/docs/api/Graph
+
+
+      renderer: "svg", //选项：'svg' | 'canvas'；默认：'canvas'。选择 SVG 或 Canvas 方式渲染。
+      fitView: false, // 默认：'false'。图是否自适应画布。
+      fitViewPadding:  0, //类型：Number | Array；默认：0。图自适应画布时的四周留白像素值(px)。fitView 为 true 时生效。
+
+      //defaultNode 全局节点的配置项 https://g6.antv.vision/zh/docs/manual/middle/elements/nodes/defaultNode
+      //defaultEdge 全局边的配置项  https://g6.antv.vision/zh/docs/manual/middle/elements/edges/defaultEdge
+      //nodeStateStyles 默认状态外的其他状态下节点的样式配置 https://g6.antv.vision/zh/docs/manual/middle/states/state
+      //edgeStateStyles 默认状态外的其他状态下边的样式配置 https://g6.antv.vision/zh/docs/manual/middle/states/state
+
+      //layout  配置布局类型及其参数，默认为随机布局 https://g6.antv.vision/zh/docs/manual/middle/layout
+      //modes 配置交互模式及交互事件 https://g6.antv.vision/zh/docs/manual/middle/states/mode
+
+      //animate  默认：'false'。是否启用全局动画。启用后，布局变化时将会以动画形式变换节点位置。
+      //animateCfg 全局动画的配置项，包括动画效果、动画时长等。https://g6.antv.vision/zh/docs/manual/advanced/animation
+
+      //plugins  配置辅助插件 https://g6.antv.vision/zh/docs/manual/tutorial/plugins
+
+
+
+    });
+
+
+    // 读取数据
+    graph.data(data);
+    // 渲染图
+    graph.render();
+  </script>
+</body>
+
+</html>

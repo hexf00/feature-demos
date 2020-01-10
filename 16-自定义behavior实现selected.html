@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tutorial Demo</title>
+</head>
+
+<body>
+    <div id="mountNode"></div>
+    <script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g6-3.2.8/build/g6.js"></script>
+    <script src="https://gw.alipayobjects.com/os/antv/assets/lib/jquery-3.2.1.min.js"></script>
+    <script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g6-3.2.8/build/minimap.js"></script>
+    <script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g6-3.2.8/build/grid.js"></script>
+    <style>
+        .g6-tooltip {
+            border: 1px solid #e2e2e2;
+            border-radius: 4px;
+            font-size: 12px;
+            color: #545454;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px 8px;
+            box-shadow: rgb(174, 174, 174) 0px 0px 10px;
+        }
+    </style>
+    <script>
+        // 数据源
+        const data = {
+            nodes: [
+                {
+                    id: 'node0',
+                    label: "a",
+                    x: 100,
+                    y: 100,
+                    size: 20,
+                },
+                {
+                    id: 'node1',
+                    label: "b",
+                    x: 200,
+                    y: 200,
+                    size: 20,
+                },
+                {
+                    id: 'node2',
+                    label: "c",
+                    x: 150,
+                    y: 150,
+                    size: 20,
+                },
+                {
+                    id: 'node3',
+                    label: "d",
+                    x: 150,
+                    y: 250,
+                    size: 20,
+                },
+                {
+                    id: 'node4',
+                    label: "??",
+                    x: 150,
+                    y: 200,
+                    size: 20,
+                },
+                {
+                    id: 'node4',
+                    label: "??",
+                    x: 90,
+                    y: 100,
+                    size: 20,
+                },
+            ],
+            edges: [
+                {
+                    id: 'edge0',
+                    source: 'node0',
+                    target: 'node1',
+                },
+                {
+                    id: 'edge1',
+                    source: 'node2',
+                    target: 'node3',
+                },
+            ],
+        };
+
+        G6.registerBehavior('nodeClick', {
+            getEvents() {
+                return {
+                    'node:click': 'onClick',
+                };
+            },
+            onClick(e) {
+                e.preventDefault();
+                if (!this.shouldUpdate.call(this, e)) {
+                    return;
+                }
+                const { item } = e;
+                const graph = this.graph;
+
+                //关闭多选
+                const selectedNodes = graph.findAllByState('node', 'selected');
+                selectedNodes.forEach(cn => {
+                    graph.setItemState(cn, 'selected', false);
+                });
+
+                graph.setItemState(item, 'selected', true);
+            },
+        });
+
+        const graph = new G6.Graph({
+            container: 'mountNode',
+            modes: {
+                default: ['nodeClick']
+            },
+            nodeStateStyles: {
+                selected: {
+                    // hover 状态为 true 时的样式
+                    fill: '#d3adf7',
+                },
+            },
+            width: 800,
+            height: 400,
+        });
+
+        graph.on('node:mouseenter', evt => {
+            const { item } = evt;
+            graph.setItemState(item, 'hover', true);
+        });
+
+        graph.on('node:mouseleave', evt => {
+            const { item } = evt;
+            graph.setItemState(item, 'hover', false);
+        });
+
+
+
+        graph.data(data);
+        graph.render();
+    </script>
+</body>
+
+</html>
