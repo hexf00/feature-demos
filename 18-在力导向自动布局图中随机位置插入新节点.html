@@ -21,9 +21,14 @@
             container: 'mountNode',  // String | HTMLElement，必须，容器 id 或容器本身
             width: 300,              // Number，必须，图的宽度
             height: 300,             // Number，必须，图的高度
-            renderer: "svg", 
+            renderer: "svg",
             modes: {
-                default: ['drag-node','drag-canvas','zoom-canvas']
+                default: ['drag-node', 'drag-canvas', 'zoom-canvas']
+            },
+            layout: {
+                type: 'force',            // 设置布局算法为 force
+                linkDistance: 100,        // 设置边长为 100
+                preventOverlap: true,     // 设置防止重叠
             },
             animate: true            // Boolean，可选，切换布局时是否使用动画过度
         });
