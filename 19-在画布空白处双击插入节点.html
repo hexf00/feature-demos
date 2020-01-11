@@ -38,6 +38,7 @@
                 count++;
                 graph.addItem('node', { id: id, label: count, x: e.x, y: e.y })
 
+                //addItem方法不会重新布局，应该要提供x,y信息
             },
         });
 
@@ -64,14 +65,6 @@
         // 读取数据和渲染
         graph.data(data);
         graph.render();
-
-
-        function add1() {
-
-            // data.nodes.push({ id: id, label: count });
-            // graph.changeData(data);
-
-        }
 
 
     </script>

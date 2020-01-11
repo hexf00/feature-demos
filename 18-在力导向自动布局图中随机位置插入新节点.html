@@ -46,6 +46,7 @@
             count++;
             data.nodes.push({ id: id, label: count });
             graph.changeData(data);
+            //changeData方法会自动调用重新布局
         }
 
 
