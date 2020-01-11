@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tutorial Layout Demo</title>
+</head>
+
+<body>
+    <button onclick="add1()">添加节点</button>
+    <div id="mountNode" style="border: 1px solid #ddd;"></div>
+    <script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g6-3.2.8/build/g6.js"></script>
+    <script src="https://gw.alipayobjects.com/os/antv/assets/lib/jquery-3.2.1.min.js"></script>
+    <script>
+        let data = {
+            nodes: [],
+            edges: []
+        };
+
+        const graph = new G6.Graph({
+            container: 'mountNode',  // String | HTMLElement，必须，容器 id 或容器本身
+            width: 300,              // Number，必须，图的宽度
+            height: 300,             // Number，必须，图的高度
+            renderer: "svg", 
+            modes: {
+                default: ['drag-node','drag-canvas','zoom-canvas']
+            },
+            animate: true            // Boolean，可选，切换布局时是否使用动画过度
+        });
+
+        $("#mountNode").width(300);
+
+        // 读取数据和渲染
+        graph.data(data);
+        graph.render();
+
+
+        var count = 0;
+        function add1() {
+            var id = new Date().getTime() + parseInt(Math.random() * 1000).toString();
+            count++;
+            data.nodes.push({ id: id, label: count });
+            graph.changeData(data);
+        }
+
+
+    </script>
+</body>
+
+</html>
