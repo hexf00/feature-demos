@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tutorial Layout Demo</title>
+    <script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g6-3.2.8/build/g6.js"></script>
+    <!-- <script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g6-3.1.0/build/g6.js"></script> -->
+
+    <script src="https://gw.alipayobjects.com/os/antv/assets/lib/jquery-3.2.1.min.js"></script>
+
+    <style>
+        #form-warp {
+            position: absolute;
+            background: #f0f0f0;
+            top: 10px;
+            left: 320px;
+            padding: 10px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mountNode" style="border: 1px solid #ddd;"></div>
+
+    <div id="form-warp">
+        <form id="form">
+            <p>label：<input type="text" value="" name="label"></p>
+            <p>
+                <button type="button" onclick="updateNode()">保存</button>
+                <button type="reset" onclick="$(`#form-warp`).hide();">取消</button>
+            </p>
+        </form>
+    </div>
+    <script>
+        let data = {
+            nodes: [
+                { id: 'node1', label: '默认节点', x: 50, y: 50 }
+            ],
+            edges: []
+        };
+
+
+        var count = 0;
+
+        //双击空白新建节点
+        G6.registerBehavior('node-dblclick-edit', {
+            getEvents() {
+                return {
+                    'node:dblclick': 'onDblClick',
+                };
+            },
+            onDblClick(e) {
+                e.preventDefault();
+                if (!this.shouldUpdate.call(this, e)) {
+                    return;
+                }
+                const { item } = e;
+                window.a = item;
+                const graph = this.graph;
+
+                const model = item.getModel();
+
+
+                $(`#form-warp`).show();
+                $(`#form input[name="label"]`).val(model.label).focus();
+
+                window.updateNode = function () {
+
+                    item.update({
+                        id: model.id,
+                        label: $(`#form input[name="label"]`).val()
+                    });
+                    
+                    //可能存在bug
+                    //第二次修改会改变数据，但是不渲染，如果拖拽一下就渲染了
+                    //所以下面使用手动刷行
+
+                    //无效不重新渲染 
+                    item.refresh()
+
+                    //有效
+                    graph.refreshItem(item)
+
+
+                }
+            },
+        });
+
+
+
+
+        const graph = new G6.Graph({
+            container: 'mountNode',  // String | HTMLElement，必须，容器 id 或容器本身
+            width: 300,              // Number，必须，图的宽度
+            height: 300,             // Number，必须，图的高度
+            renderer: "svg",
+            modes: {
+                default: ['node-dblclick-edit', 'drag-node', 'drag-canvas', 'zoom-canvas']
+            },
+
+            layout: {
+                type: 'force',            // 设置布局算法为 force
+                linkDistance: 100,        // 设置边长为 100
+                preventOverlap: true,     // 设置防止重叠
+            },
+            animate: true            // Boolean，可选，切换布局时是否使用动画过度
+        });
+
+        $("#mountNode").width(300);
+
+        // 读取数据和渲染
+        graph.data(data);
+        graph.render();
+
+
+    </script>
+</body>
+
+</html>
