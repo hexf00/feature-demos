@@ -28,7 +28,7 @@
 
 <body>
 
-
+    <p>拖拽实在是有点太不灵敏了，怀疑是事件问题</p>
 
     <div style="position: relative;">
 
@@ -321,13 +321,24 @@
                     // console.log(this.targets)
 
 
+
+
                     if (this.targets.length > 0) {
-                        this.targets.forEach(node => {
-                            graph.addItem('edge', {
-                                source: node.getModel().id,
-                                target: this.targetId
-                            })
-                        });
+
+
+                        //如果目标ID是已经选择的目标则放弃此次操作
+                        if (!this.targets.find(node => node.getModel().id == this.targetId)) {
+                            this.targets.forEach(node => {
+                                graph.addItem('edge', {
+                                    source: node.getModel().id,
+                                    target: this.targetId
+                                })
+                            });
+                        }
+
+
+
+
                     } else if (this.target) {
 
                         graph.addItem('edge', {
@@ -633,7 +644,7 @@
             height: 300,             // Number，必须，图的高度
             // renderer: "svg",
             modes: {
-                default: ['custom-drag-node', 'node-dblclick-edit', 'nodeClick', 'drag-canvas', 'zoom-canvas']
+                default: ['brush-select', 'custom-drag-node', 'node-dblclick-edit', 'nodeClick', 'drag-canvas', 'zoom-canvas']
             },
 
             nodeStateStyles: {
