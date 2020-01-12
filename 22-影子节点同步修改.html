@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tutorial Layout Demo</title>
+    <script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g6-3.2.8/build/g6.js"></script>
+    <!-- <script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g6-3.1.0/build/g6.js"></script> -->
+
+    <script src="https://gw.alipayobjects.com/os/antv/assets/lib/jquery-3.2.1.min.js"></script>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #focus-input {
+            outline: none;
+            border: 1px solid rgb(24, 144, 255);
+            position: absolute;
+            width: auto;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="add1()">添加节点1</button>
+    <button onclick="add2()">添加节点2</button>
+
+    被重复添加的节点修改时会同步改变。
+
+    <div style="position: relative;">
+
+        <div id="mountNode" style="border: 1px solid #ddd;"></div>
+        <div type="text" id="focus-input"></div>
+
+    </div>
+    <script>
+
+        //光标最后 cnblogs.com/ybixian/p/10601224.html
+        function keepLastIndex(obj) {
+            console.log(obj)
+            console.log(window.getSelection)
+            console.log(document.selection)
+            if (window.getSelection) { //ie11 10 9 ff safari
+                obj.focus(); //解决ff不获取焦点无法定位问题
+                var range = window.getSelection(); //创建range
+                range.selectAllChildren(obj); //range 选择obj下所有子内容
+                range.collapseToEnd(); //光标移至最后
+            } else if (document.selection) { //ie10 9 8 7 6 5
+                var range = document.selection.createRange(); //创建选择对象
+                //var range = document.body.createTextRange();
+                range.moveToElementText(obj); //range定位到obj
+                range.collapse(false); //光标移至最后
+                range.select();
+            }
+        }
+
+        let data = {
+            nodes: [
+                { id: 'node1', shape: 'rect', label: '默认节点', x: 50, y: 50 }
+            ],
+            edges: []
+        };
+
+
+        var count = 0;
+
+        //双击空白新建节点
+        G6.registerBehavior('node-dblclick-edit', {
+            getEvents() {
+                return {
+                    'node:dblclick': 'onDblClick',
+                };
+            },
+            onDblClick(e) {
+                e.preventDefault();
+                if (!this.shouldUpdate.call(this, e)) {
+                    return;
+                }
+                const { item } = e;
+                window.a = item;
+                const graph = this.graph;
+
+                const model = item.getModel();
+
+
+
+
+
+
+                const zoom = graph.getZoom();
+
+                //下面代码参考 github.com/alibaba/GGEditor/tree/master/src/plugins/EditableLabel
+
+
+                const group = item.getContainer();
+                const labelShape = group.findByClassName('node-label');
+
+                const { x: relativeX, y: relativeY } = labelShape.getBBox();
+                const { x: absoluteX, y: absoluteY } = G6.Util.applyMatrix(
+                    {
+                        x: relativeX,
+                        y: relativeY,
+                    },
+                    item.getContainer().getMatrix(),
+                );
+
+                const { x: left, y: top } = graph.getCanvasByPoint(absoluteX, absoluteY);
+                const { width, height } = labelShape.getBBox();
+
+
+                $(`#focus-input`)
+                    .css('left', left)
+                    .css('top', top)
+                    .css('minWidth', width)
+                    .css('minHeight', height)
+                    .css('background', '#fff')
+                    .css('font-size', labelShape.attr('fontStyle'))
+                    .css('font-variant', labelShape.attr('fontVariant'))
+                    .css('font-weight', labelShape.attr('fontWeight'))
+                    .css('font-size', labelShape.attr('fontSize'))
+                    .css('font-family', labelShape.attr('fontFamily'))
+                    .css('transform', `scale(${zoom})`)
+                    .css('transformOrigin', 'left top')
+                    .html(model.label)
+                    .attr('contenteditable', 'true')
+                    .show()
+                    .focus()
+                    .on("input", function () {
+                        //记录长度变化
+                    })
+                    .on("blur", function () {
+                        //失去焦点事件
+
+                        const findNodes = graph.findAll('node', node => {
+                            return node.get('model').realId === model.realId;
+                        });
+
+                        findNodes.forEach(node => {
+                            graph.updateItem(node, {
+                                label: $(this).text(),
+                                // size: [$(this).width() + 40, $(this).height() + 20]
+                            })
+                        });
+
+
+
+                        $(this).hide();
+                    });
+                keepLastIndex($(`#focus-input`)[0]);
+
+            },
+        });
+
+
+
+
+        const graph = new G6.Graph({
+            container: 'mountNode',  // String | HTMLElement，必须，容器 id 或容器本身
+            width: 300,              // Number，必须，图的宽度
+            height: 300,             // Number，必须，图的高度
+            // renderer: "svg",
+            modes: {
+                default: ['node-dblclick-edit', 'drag-node', 'drag-canvas', 'zoom-canvas']
+            },
+
+            layout: {
+                type: 'force',            // 设置布局算法为 force
+                linkDistance: 100,        // 设置边长为 100
+                preventOverlap: true,     // 设置防止重叠
+            },
+            animate: true            // Boolean，可选，切换布局时是否使用动画过度
+        });
+
+        $("#mountNode").width(300);
+
+        // 读取数据和渲染
+        graph.data(data);
+        graph.render();
+
+
+
+        function add1() {
+            var id = new Date().getTime() + parseInt(Math.random() * 1000).toString();
+            data.nodes.push({ id: id, realId: 1, label: '节点1', style: { stroke: '#f00' } });
+            graph.changeData(data);
+        }
+
+        function add2() {
+            var id = new Date().getTime() + parseInt(Math.random() * 1000).toString();
+            data.nodes.push({ id: id, realId: 1, label: '节点2', style: { stroke: '#ff0' } });
+            graph.changeData(data);
+        }
+
+
+
+    </script>
+</body>
+
+</html>
