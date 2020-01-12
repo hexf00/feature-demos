@@ -43,9 +43,9 @@
 
         //光标最后 cnblogs.com/ybixian/p/10601224.html
         function keepLastIndex(obj) {
-            console.log(obj)
-            console.log(window.getSelection)
-            console.log(document.selection)
+            // console.log(obj)
+            // console.log(window.getSelection)
+            // console.log(document.selection)
             if (window.getSelection) { //ie11 10 9 ff safari
                 obj.focus(); //解决ff不获取焦点无法定位问题
                 var range = window.getSelection(); //创建range
@@ -137,6 +137,7 @@
                     .on("blur", function () {
                         //失去焦点事件
 
+                        console.log(model.realId);
                         const findNodes = graph.findAll('node', node => {
                             return node.get('model').realId === model.realId;
                         });
@@ -150,7 +151,7 @@
 
 
 
-                        $(this).hide();
+                        $(this).hide().unbind();
                     });
                 keepLastIndex($(`#focus-input`)[0]);
 
@@ -193,7 +194,7 @@
 
         function add2() {
             var id = new Date().getTime() + parseInt(Math.random() * 1000).toString();
-            data.nodes.push({ id: id, realId: 1, label: '节点2', style: { stroke: '#ff0' } });
+            data.nodes.push({ id: id, realId: 2, label: '节点2', style: { stroke: '#ff0' } });
             graph.changeData(data);
         }
 
