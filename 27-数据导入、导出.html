@@ -657,26 +657,27 @@
                     stroke: '#f00'
                 }
             },
-            // layout: {
-            //     type: 'force',            // 设置布局算法为 force
-            //     linkDistance: 150,        // 设置边长为 100
-            //     preventOverlap: true,     // 设置防止重叠
-            //     nodeSize: 60,
-            //     nodeStrength: 10,
-            //     edgeStrength: 3,
-            // }, 
             layout: {
-                type: 'dagre',
-                nodeSize: [40, 20],
-                nodesep: 1,
-                ranksep: 1
+                type: 'force',            // 设置布局算法为 force
+                linkDistance: 150,        // 设置边长为 100
+                preventOverlap: true,     // 设置防止重叠
+                nodeSize: 60,
+                nodeStrength: 10,
+                edgeStrength: 3,
             },
+
+            // layout: {
+            //     type: 'dagre',
+            //     nodeSize: [40, 20],
+            //     nodesep: 1,
+            //     ranksep: 1
+            // },
             // layout: {
             //     type: 'radial',            // 设置布局算法为 force
             //     unitRadius: 120,
             //     preventOverlap:false,
             //     nodeSize:200,
-            //     nodeSpacing:50,
+            //     nodeSpacing:100,
             // },
 
             animate: true            // Boolean，可选，切换布局时是否使用动画过度
@@ -772,6 +773,8 @@
                 //不指定X,Y 依靠布局算法重新布局
                 //该方法布局依然存在随机性，比如理想情况是向外散射，但是依然存在向内闪射的情况
                 //且新节点出现的位置是没有顺序规则的
+
+                var data = graph.save();
                 var addNode = () => {
                     var id = new Date().getTime() + parseInt(Math.random() * 1000).toString();
                     data.nodes.push({
