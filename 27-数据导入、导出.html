@@ -120,7 +120,8 @@
             //原始坐标
             getEvents() {
                 return {
-                    'node:dragstart': 'onDragStart',
+                    //dragstart
+                    'node:mousedown': 'onDragStart',
                     'node:drag': 'onDrag',
                     'node:dragend': 'onDragEnd',
                     mouseenter: 'onMouseEnter',
