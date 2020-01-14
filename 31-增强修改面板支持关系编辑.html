@@ -51,7 +51,8 @@
             padding: 0;
         }
 
-        .search-bar {
+        .search-bar,
+        .attr-bar {
             position: fixed;
             z-index: 999;
             top: 24px;
@@ -61,7 +62,12 @@
             /* max-height: 200px; */
         }
 
-        .search-bar ul {
+        .attr-bar {
+            right: 0;
+        }
+
+        .search-bar ul,
+        .attr-bar ul {
             list-style: none;
             margin: 5px;
             padding: 0;
@@ -89,13 +95,33 @@
             <div v-else>
                 <div>
                     <input type="text" v-model="filterKey">
-                    <span  style="float: right;" @click="showSearch=false">x</span>
+                    <span style="float: right;" @click="showSearch=false">x</span>
                 </div>
 
                 <ul>
                     <li v-for="node in listNodes" :title="node.label" :data-id="node.id" @click="focus">{{node.label}}
                     </li>
                 </ul>
+            </div>
+
+        </div>
+
+
+        <div class="attr-bar">
+            <div v-if="!showAttr" @click="showAttr=true">+</div>
+
+            <div v-else>
+                <div>
+                    <p v-if="currentType == 'Node'">
+                        currentType:{{currentType}}
+                    </p>
+                    <p v-else>
+                        {{currentEdgeSource}} =={{currentItem.label}}==>
+                        {{currentEdgeTarget}}
+                    </p>
+                    <p>label：<input type="text" v-model="currentItem.label" name="label"></p>
+                    <button type="button" @click="updateItem()">保存</button>
+                </div>
             </div>
 
         </div>
@@ -565,6 +591,9 @@
                 }
 
                 graph.setItemState(item, 'selected', true);
+
+                app.currentType = "Node";
+                app.currentItem = item.getModel();
             },
         });
 
@@ -756,6 +785,10 @@
             const edgeItem = e.item;
             // 设置目标边的 click 状态 为 true
             graph.setItemState(edgeItem, 'selected', true);
+
+
+            app.currentType = "Edge";
+            app.currentItem = edgeItem.getModel();
         });
 
         //参考antv-2018.alipay.com/zh-cn/g6/3.x/demo/tool/context-menu.html
@@ -1006,6 +1039,16 @@
         var app = new Vue({
             el: '#app',
             computed: {
+                currentEdgeSource: function () {
+                    if (this.currentType == "Edge") {
+                        return graph.findById(this.currentItem.source).getModel().label
+                    }
+                },
+                currentEdgeTarget() {
+                    if (this.currentType == "Edge") {
+                        return graph.findById(this.currentItem.target).getModel().label
+                    }
+                },
                 listNodes: function () {
                     // var sortKey = this.sortKey
                     var filterKey = this.filterKey && this.filterKey.toLowerCase()
@@ -1026,9 +1069,40 @@
                     //     })
                     // }
                     return nodes
-                }
+                },
+
             },
             methods: {
+                updateItem: function () {
+
+                    if (this.currentType == "Node") {
+
+                        var item = graph.findById(this.currentItem.id);
+                        item.update({
+                            // id: this.currentItem.id,
+                            label: this.currentItem.label
+                        });
+
+                        graph.refreshItem(item)
+                    } else {
+                        var item = graph.findById(this.currentItem.source);
+                        const edges = item.getOutEdges()
+
+                        edges.forEach(edge => {
+                            if (edge.getModel().target == this.currentItem.target) {
+                                edge.update({
+                                    // id: this.currentItem.id,
+                                    label: this.currentItem.label
+                                });
+
+                                graph.refreshItem(edge)
+                            }
+
+                        })
+
+                    }
+
+                },
                 focus: function (e) {
 
                     //参考g6.antv.vision/zh/examples/interaction/position
@@ -1043,6 +1117,9 @@
 
 
                     graph.setItemState(item, 'selected', true);
+
+                    this.currentType = "Node";
+                    this.currentItem = item.getModel();
                     // const item = event.item;
                     // 聚焦当前点击的节点（把节点放到视口中心）
 
@@ -1082,7 +1159,11 @@
                 }
             },
             data: {
-                showSearch:true,
+                currentType: '', //Node、Edge
+                currentItem: {},
+
+                showSearch: true,
+                showAttr: true,
                 filterKey: "",
                 nodes: graph.save().nodes,
             }
