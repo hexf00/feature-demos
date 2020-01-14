@@ -111,6 +111,7 @@
             <div v-if="!showAttr" @click="showAttr=true">+</div>
 
             <div v-else>
+                <div><span style="float: right;" @click="showAttr=false">x</span></div>
                 <div>
                     <p v-if="currentType == 'Node'">
                         currentType:{{currentType}}
