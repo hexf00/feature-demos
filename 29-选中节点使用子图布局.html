@@ -832,7 +832,7 @@
             }
         }
 
-        function relayout(el){
+        function relayout(el) {
             var currentNodeId = $(el).data('id');
             var node = graph.findById(currentNodeId);
             // console.log();
@@ -859,16 +859,16 @@
             // nodes[0].fx = nodes[0].x;
             // nodes[0].fy = nodes[0].y;
 
-          
+
             //获取选择中的节点
 
             console.log()
 
-            graph.findAllByState('node','selected').forEach(function (node, i) {
+            graph.findAllByState('node', 'selected').forEach(function (node, i) {
                 var nodeModel = node.getModel();
                 // nodeModel.fx = nodeModel.x;
                 // nodeModel.fy = nodeModel.y;
-                
+
                 // nodeModel.x = null;
                 // nodeModel.y = null;
                 newNodes.push(nodeModel);
@@ -881,7 +881,7 @@
 
 
 
-            console.log(newNodes,newNodeMap);
+            console.log(newNodes, newNodeMap);
 
             // add related edges
             // 只要有关系都带进来
@@ -894,15 +894,38 @@
             });
 
             const subForceLayout = new G6.Layout.force({
-                center: [centerNode.x,centerNode.y],
-                linkDistance: 70,
+                center: [centerNode.x, centerNode.y],
+                linkDistance: 120,
                 preventOverlap: true,
-                nodeSize: 20,
+                // nodeSize: 20,
                 tick: function tick() {
                     // the tick function to show the animation of layout process
                     graph.refreshPositions();
                 }
             });
+
+            //下面布局算法需要手动调用graph.refreshPositions();
+
+            // const subForceLayout = new G6.Layout.radial({
+            //     center: [centerNode.x,centerNode.y],
+            //     unitRadius: 120,
+            //     preventOverlap:false,
+            //     nodeSize:200,
+            //     nodeSpacing:50,
+
+            // });
+
+
+            // dagre算法没有中心节点参数指定
+            // const subForceLayout = new G6.Layout.dagre({
+            //     nodeSize: [40, 20],
+            //     nodesep: 1,
+            //     ranksep: 1
+            // });
+
+
+
+
             subForceLayout.init({
                 nodes: newNodes,
                 edges: newEdges
