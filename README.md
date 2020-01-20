@@ -15,7 +15,6 @@ g6 学习笔记记录。
 - 2.x editor 闭源 <https://github.com/antvis/g6-editor>
 - 2.x editor doc <https://github.com/antvis/g6-editor/files/3101934/G6-Editor.pdf>
 
-
 ## 进度说明
 
-- 2020年1月20日 目前相关API都已经有大致了解，接下来精力主要集中在图编辑器的功能和界面设计、数据结构和存储、实现上
+- 2020年1月20日 目前相关API都已经有大致了解，接下来精力主要集中在图编辑器的功能和界面设计、数据结构和存储、实现上。 <https://github.com/hexf00/graph-toy>
