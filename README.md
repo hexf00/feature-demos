@@ -4,6 +4,8 @@ g6 学习笔记记录。
 
 ## doc/demo
 
+- g doc <https://g.antv.vision/zh/docs/api/canvas>
+
 - 3.x doc <https://www.yuque.com/antv/g6/intro>
 - 1.x doc <https://antv.vision/old-site/g6/api/index.html>
   
