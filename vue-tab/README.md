@@ -13,7 +13,7 @@
 * 为什么不支持写法 `<tab active="tab1">` 、 `<tab :active="'tab1'">`
 
   如果要支持，需要进行如下操作：
-  1. 如果要支持这种写法就需要在tab组件中添加状态变量 `active_local`
+  1. 在tab组件中添加状态变量 `active_local`，因为父控件传递是常量
   2. 使用watch对props数据 `active` 进行监听然后复制给 `active_local` 
   3. computed属性 `active_c` 的操作对象 从对 props数据 `active` 改为对 data数据 `active_local` 的操作
   
