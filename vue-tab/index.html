@@ -24,11 +24,22 @@
             <panel title="tab2">content2</panel>
             <panel title="tab3">content3</panel>
         </tab>
+
+        <tab v-model="active">
+            <panel title="tab1">content1</panel>
+            <panel title="tab2">content2</panel>
+            <panel title="tab3">content3</panel>
+        </tab>
     </div>
 
     <script>
-        new Vue({
+        var app = new Vue({
             el: "#app",
+            data() {
+                return {
+                    active: "tab1"
+                }
+            }
         })
     </script>
 </body>
