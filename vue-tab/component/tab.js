@@ -16,21 +16,14 @@ Vue.component('tab', {
     props: {
         active: String,
     },
-    watch: {
-        active(val) {
-            console.log("watch");
-            this.active_local = val
-        }
-    },
     computed: {
         active_c: {
             get() {
                 console.log("computed-get");
-                return this.active_local;
+                return this.active;
             },
             set(val) {
                 console.log("computed-set");
-                this.active_local = val;
                 this.$emit("update:active", val);
                 this.$emit("input", val);
             }
@@ -38,7 +31,6 @@ Vue.component('tab', {
     },
     data() {
         return {
-            active_local: this.active,
             panelTitles: [],
         }
     },
