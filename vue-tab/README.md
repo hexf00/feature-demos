@@ -10,11 +10,11 @@
 
 ## 笔记
 
-* 为什么不支持写法 `<tab active="tab1">` 、 `<tab :active="'tab1'">`
+* 为什么不支持写法 `<tab active="tab1">` 、 `<tab :active="'tab1'">`？
 
   如果要支持，需要进行如下操作：
   1. 在tab组件中添加状态变量 `active_local`，因为父控件传递是常量
-  2. 使用watch对props数据 `active` 进行监听然后复制给 `active_local` 
+  2. 使用watch对props数据 `active` 进行监听然后复制给 `active_local`
   3. computed属性 `active_c` 的操作对象 从对 props数据 `active` 改为对 data数据 `active_local` 的操作
   
   可见数据流转逻辑变得复杂，增加了代码量。
@@ -25,8 +25,12 @@
 
   综上，为了一个语法糖增加了很多不必要的维护成本，尤其是在团队合作中成本会被放大，是不划算的。
 
-* 为什么不支持写法 `<tab :active="active">` 
+* 为什么不支持写法 `<tab :active="active">`？
 
   数据应单向流转，子组件内如果需要改变父组件数据需要通过事件机制，否则违背了常规逻辑。
 
 * `v-model` 和 `v-bind:active.sync` 本质是相同类型的语法糖。
+
+* 为什么不使用数字索引做激活标签页的判断？
+  
+  当标签页的数量、顺序发生变化时，就需要更新索引，使用名称就可以避免这些不便。
