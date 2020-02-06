@@ -30,6 +30,12 @@
             <panel title="tab2">content2</panel>
             <panel title="tab3">content3</panel>
         </tab>
+        
+        <tab :active.sync="active2">
+            <panel title="tab1">content1</panel>
+            <panel title="tab2">content2</panel>
+            <panel title="tab3">content3</panel>
+        </tab>
     </div>
 
     <script>
@@ -37,7 +43,8 @@
             el: "#app",
             data() {
                 return {
-                    active: "tab1"
+                    active: "tab1",
+                    active2: "tab1"
                 }
             }
         })

@@ -31,6 +31,7 @@ Vue.component('tab', {
             set(val) {
                 console.log("computed-set");
                 this.active_local = val;
+                this.$emit("update:active", val);
                 this.$emit("input", val);
             }
         }
