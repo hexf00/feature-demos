@@ -43,3 +43,20 @@ for (let index = 0; index < data.length; index++) {
     console.log(index, element, data[index]);
 }
 console.log(data)
+
+
+var data = Array(5).fill().map((v, k) => k);
+
+for (let index = 0; index < data.length; index++) {
+    const element = data[index];
+
+    // console.log(index, deleteCount)
+    if (element == 1 || element == 2 || element == 3) {
+        data.splice(index, 1)
+        index--
+    }
+
+
+    console.log(index, element, data[index]);
+}
+console.log(data)
