@@ -4,6 +4,7 @@
 * `hover` 实现是 `mouseenter` 和 `mouseleave`
 * `mouseenter` 与 `mouseover` 事件不同，`mouseenter` 事件只有在鼠标指针进入被选元素时被触发，`mouseover` 事件在鼠标指针进入任意子元素时也会被触发。
 * `on`和`delegate`可以将事件绑定在未来添加的元素，其它不行，如`click`、`bind`
+* 所有事件绑定优先使用`on`
 
 ## 比较：额外参数与子选择器
 
@@ -16,6 +17,11 @@
   
   * `delegate`的第一个参数不是事件，是子选择器
   * 都是第三个参数是额外数据
+
+* `live`和`die`
+
+  * 可以对未来添加的元素生效
+  * 在1.9被移除
 
 ## 事件执行顺序
 
