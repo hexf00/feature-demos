@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://gw.alipayobjects.com/os/antv/assets/lib/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <ul>
+
+
+    </ul>
+
+    <script>
+
+
+
+
+
+
+        $("ul").html(new Array(10).fill().map((it, index) => { return `<li id="li-${index}" onclick="console.log(${index})"><a href="#">${index + 1}</a></li>` }))
+
+        var a = function () {
+            console.log(123);
+        }
+        document.getElementById("li-0").addEventListener("click", a);
+
+        $("ul li").click(() => { console.log(1) });
+
+        // document.getElementById("li-0").onclick = function(){
+        //     console.log("onclick")
+        // }
+
+        // $("ul").delegate("li", "click", function (e) {
+        //     console.log("before+click+delegate+will", e, this)
+        // });
+
+        // $("ul li").undelegate(); //无效
+        // $("ul").undelegate(); //有效
+        //  $("ul").off(); //有效
+        //  $("ul li").off(); //无效
+
+        // $("ul").unbind(); //有效
+        $("ul li").unbind(); //无效
+
+        // document.getElementById("li-0").onclick = null
+        // document.getElementById("li-0").removeEventListener("click", a);
+        window.a =   document.getElementById("li-0");
+        // document.getElementById("li-0").getEventListeners().click.forEach((e)=>{e.remove()}) 
+
+
+
+    </script>
+
+</body>
+
+</html>

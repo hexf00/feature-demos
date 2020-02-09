@@ -1,10 +1,22 @@
 # jq 事件相关
 
+## hover
+
 * `hover`非原生事件，无法作用在`on`、`bind`方法，只能作用在已经存在的元素
 * `hover` 实现是 `mouseenter` 和 `mouseleave`
 * `mouseenter` 与 `mouseover` 事件不同，`mouseenter` 事件只有在鼠标指针进入被选元素时被触发，`mouseover` 事件在鼠标指针进入任意子元素时也会被触发。
+
+## 绑定与注销事件
+
+* 原生事件绑定方式包括两种：HTML或DOM元素的onXX属性(等价)、addEventListener
+* `addEventListener`绑定事件如果使用的是匿名函数或无法获取绑定时使用的函数，事件将无法解除绑定
+* jq使用`addEventListener`和`removeEventListener`管理事件
+* 最新版本jq推荐所有事件绑定使用`on`， `off`
 * `on`和`delegate`可以将事件绑定在未来添加的元素，其它不行，如`click`、`bind`
-* 所有事件绑定优先使用`on`
+* `off`和`unbind`效果等价，均可以移除由`on`、`bind`、`delegate`和其它方法添加的事件。
+* `off`和`unbind`等其它jq方法无法移除原生API `addEventListener` 绑定的事件
+* `undelegate`只能作用`delegate`添加的事件，无法作用`on`、`bind`添加的事件
+* Chrome CLI API `getEventListeners(dom)`可以获取到元素的属性，`getEventListeners(dom).click.forEach((e)=>dom.removeEventListener(e.type,e))`可以移除`addEventListener` 绑定的事件
 
 ## 比较：额外参数与子选择器
 
