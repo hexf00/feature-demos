@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://gw.alipayobjects.com/os/antv/assets/lib/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <ul>
+
+
+    </ul>
+
+    <script>
+
+        $("ul").bind("click", function (e) {
+            console.log('1');
+        })
+
+        $("ul").on("click", function (e) {
+            console.log('2');
+        })
+
+
+
+        $("ul").html(new Array(10).fill().map((it, index) => { return `<li><a href="#">${index + 1}</a></li>` }))
+
+        $("ul").delegate("li", "click", function (e) {
+            console.log("before+click+delegate+will", e, this)
+        });
+
+        $("ul").on('click', 'li', function (e) {
+            console.log("before+click+on+will", e, this)
+        })
+
+
+        // 第二个参数是额外数据，而非子选择器
+        $("ul li").bind('click', function (e) {
+            console.log("before+click+bind+default", e, this, e.data)
+        })
+
+        $("ul li").on('click', function (e) {
+            console.log("before+click+on+default", e, this)
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>
