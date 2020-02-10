@@ -2,9 +2,10 @@
 
 ## hover
 
-* `hover`非原生事件，无法作用在`on`、`bind`方法，只能作用在已经存在的元素
+* `hover`非原生事件，无法作用在`on`、`bind`方法，`hover`只能作用在已经存在的元素
 * `hover` 实现是 `mouseenter` 和 `mouseleave`
-* `mouseenter` 与 `mouseover` 事件不同，`mouseenter` 事件只有在鼠标指针进入被选元素时被触发，`mouseover` 事件在鼠标指针进入任意子元素时也会被触发。
+* `mouseenter` 与 `mouseleave` 的判断边缘是事件绑定的元素边缘，在子元素之间移动不会重复触发事件。
+* `mouseover` 与 `mouseout` 的判断便于是事件绑定元素的任意元素便于，子元素之间的移动会均会触发对应事件。
 
 ## 绑定与注销事件
 

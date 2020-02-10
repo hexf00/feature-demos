@@ -7,6 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="https://gw.alipayobjects.com/os/antv/assets/lib/jquery-3.2.1.min.js"></script>
+    <style>
+        ul li {
+            background: #ddd;
+            margin-bottom: 10px;
+        }
+
+        ul li a {
+            background: #f00;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,23 +26,27 @@
     </ul>
 
     <script>
-        //无效
-        $("ul li").hover(function (e) {
-            console.log("before+hover", e, this)
-        })
+        $("ul").html(new Array(10).fill().map((it, index) => { return `<li><a href="#">${index + 1}</a></li>` }))
 
-        $("ul").on('hover', 'li', function (e) {
-            console.log("before+hover+on", e, this)
-        })
 
-        $("ul").bind('hover', 'li', function (e) {
-            console.log("before+hover+bind", e, this)
-        })
+        // $("ul li").hover(function (e) {
+        //     console.log("hover", new Date(), e, this)
+        // })
 
-        $("ul").html(new Array(10).fill().map((it, index) => { return `<li>${index + 1}</li>` }))
+        // 在li的内部移动不会再次触发
+        // target会由不同，currentTarget相同
+        // $("ul li").mouseenter(function (e) {
+        //     console.log("mouseenter", new Date(), e, this)
+        // }).mouseleave(function (e) {
+        //     console.log("mouseleave", new Date(), e, this)
+        // })
 
-        $("ul li").hover(function (e) {
-            console.log("after+hover", e, this)
+        //当光标从li移动入a标签内，会触发一次li的mouseout，再触发一次a标签的mouseover
+        //反之毅然
+        $("ul li").mouseover(function (e) {
+            console.log("mouseover", new Date(), e, this)
+        }).mouseout(function (e) {
+            console.log("mouseout", new Date(), e, this)
         })
     </script>
 
