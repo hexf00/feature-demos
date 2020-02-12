@@ -15,3 +15,7 @@
 * [vscode-note VS Code使用笔记](vscode-note)
 * [chrome-note Chrome使用笔记](chrome-note)
 * [windows-note Windows使用笔记](windows-note)
+
+## 技术
+
+* [knowledge-graph-note 知识图谱笔记](knowledge-graph-note)
