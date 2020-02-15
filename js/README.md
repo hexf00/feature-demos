@@ -1,5 +1,9 @@
 # js函数
 
+
+* [避坑-JS删除数组的元素](js-delete-array-item)
+* [思考-JS找出数组中重复元素](js-filter-array-repeat-item)
+
 ## minix
 
 * `assign` 传参 `undefined` 不影响使用
@@ -23,6 +27,12 @@
   * **如果一个元素不添加空对象`{}`，实际上是将元素合并在obj1上。**
   * `obj1.x`和`obj2.x`如果都是对象，并不会按属性合并，而是直接使用引用覆盖，而非值克隆。
   * 合并规则从后往前合并
+
+## 异步操作
+
+* Promise <https://es6.ruanyifeng.com/#docs/promise>
+* await和async <https://es6.ruanyifeng.com/#docs/async#%E9%A1%B6%E5%B1%82-await>
+* callback
 
 ## 可迭代对象
 
