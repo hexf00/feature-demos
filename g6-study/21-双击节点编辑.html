@@ -132,7 +132,7 @@
                             size: [$(this).width() + 40, $(this).height() + 20]
                         })
 
-                        $(this).hide();
+                        $(this).hide().unbind();;
                     });
                 keepLastIndex($(`#focus-input`)[0]);
 
