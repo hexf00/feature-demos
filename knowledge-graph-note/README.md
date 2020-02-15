@@ -15,8 +15,8 @@
 
 * 节点/node
   * 图的构成元素
-* [实体/entity/resource](entity.md)
-* 类别/概念/category/class
+* [实体/entity/resource](EntityAndClass.md)
+* [类别/概念/category/class](EntityAndClass.md)
   * 如何为实体定义类别？
   * 已知人类可以作为一种类别的概念，如果把人类细分，还可以按国别分，按种族分等等
 * 关系/edge/link
