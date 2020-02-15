@@ -5,12 +5,12 @@
 ## 代码
 
 * [js](js)
-  * [避坑-JS删除数组的元素](js-delete-array-item)
-  * [思考-JS找出数组中重复元素](js-filter-array-repeat-item)
-  * [避坑-JQ事件绑定](jq-event)
-  * [rxjs-study rxjs学习](rxjs-study)
-  * [g6-study g6学习demo](g6-study)
-  * [vue-tab 简易tabs控件](vue-tab)
+  * [避坑-JS删除数组的元素](js/js-delete-array-item)
+  * [思考-JS找出数组中重复元素](js/js-filter-array-repeat-item)
+  * [避坑-JQ事件绑定](js/jq-event)
+  * [rxjs-study rxjs学习](js/rxjs-study)
+  * [g6-study g6学习demo](js/g6-study)
+  * [vue-tab 简易tabs控件](js/vue-tab)
 
 ## 工具
 
