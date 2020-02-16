@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>G6 Demo</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.staticfile.org/lodash.js/4.17.15/lodash.min.js"></script>
+    <script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g6-3.2.8/build/g6.js"></script>
+    <script src="https://gw.alipayobjects.com/os/antv/assets/lib/jquery-3.2.1.min.js"></script>
+
+    <script src="libs/scheduler.js"></script>
+
+    <script src="behaviors/node-click.js"></script>
+    <script src="behaviors/custom-drag-node.js"></script>
+    <script src="behaviors/node-dblclick-edit.js"></script>
+    <script src="behaviors/shortcut-keys.js"></script>
+
+    <style>
+        #graph1,
+        #graph2 {
+            width: 300px;
+            height: 300px;
+            float: left;
+        }
+
+        #graph1 {
+            border: 1px solid #f00;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="clear: both;"></div>
+
+    <div style="position:absolute;">
+        <div id="graph1"></div>
+        <div type="text" id="focus-input"></div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="render.js"></script>
+    <script src="event.js"></script>
+</body>
+
+</html>
