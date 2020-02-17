@@ -11,4 +11,5 @@
 
 ## `Observable.subscribe`
 
-订阅。
+* 订阅。
+* 注意，没有订阅(`Observable.subscribe`)则订阅服务器(`subscriber`)不会被创建
