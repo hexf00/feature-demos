@@ -41,6 +41,18 @@
 * next 方法
 * yield 语法
 
+## 函数
+
+* `fn.call(newThis, arguments...)` 改变`this`指针并调用
+* `fn.apply(newThis, [arguments...])` 改变`this`指针并调用，参数以数组格式传入
+* `fn.bind(newThis)` 改变`this`指针，返回一个新函数
+* `arguments.callee` 函数指针，值是当前函数传入参数的所有者，相当于函数的`this`，可以用于函数名被重写或函数名不确定的情况
+* `fn.caller` 函数指针，值是当前函数的调用者
+* `arguments.callee.caller.arguments` 调用当前函数的函数的传入参数
+* 参考
+  * [《arguments.callee和caller的区别》@niulina](https://www.cnblogs.com/niulina/p/5701404.html)
+  * [《call()、apply()、bind()的用法终于理解》@Shd-Study](https://www.cnblogs.com/Shd-Study/p/6560808.html)
+
 ## 流程控制
 
 * 堆栈式调用
