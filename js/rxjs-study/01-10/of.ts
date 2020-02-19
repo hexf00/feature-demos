@@ -1,4 +1,4 @@
-import { of } from 'rxjs'
+import { of } from '../node_modules/_rxjs@6.5.4@rxjs';
 
 of(1, 2, 3).subscribe(console.log)
 

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/rxjs/7.0.0-alpha.0/rxjs.umd.js"></script>
+</head>
+
+<body>
+    <button id="btn">点击</button>
+
+    <script>
+        // 写法1
+        // const observable = new rxjs.Observable(subscriber => {
+        //     var button = document.getElementById('btn')
+        //     button.addEventListener('click', (e) => {
+        //         subscriber.next(e)
+        //     })
+        // });
+
+        // observable.subscribe(e => {
+        //     console.log(e);
+        // });
+        
+
+        var observerArr = []
+        //observerArr[0] == observerArr[1]
+            
+        // 写法2
+        const onSubscribe = observer => {
+            //注意：
+            // 每次test$.subscribe()都会执行该函数一次
+            // 每次传入的observer都是不同的
+            // 所以函数内的事件会被多次绑定到一个元素上
+
+            observerArr.push(observer)
+
+
+
+            var button = document.getElementById('btn')
+            button.addEventListener('click', (e) => {
+                observer.next(e)
+            })
+        }
+
+        const theObserver = {
+            next: event => console.log(event)
+        }
+
+        const test$ = new rxjs.Observable(onSubscribe)
+        test$.subscribe(theObserver)
+        test$.subscribe(theObserver)
+
+        setTimeout(()=>{
+            console.log(observerArr)
+            console.log(observerArr[0] == observerArr[1])
+        },100)
+    </script>
+</body>
+
+</html>

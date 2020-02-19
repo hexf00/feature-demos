@@ -1,4 +1,4 @@
-import { from, asyncScheduler } from 'rxjs';
+import { from, asyncScheduler } from '../node_modules/_rxjs@6.5.4@rxjs';
 
 
 from([0, 1, 2], asyncScheduler).subscribe(x => console.log(x))

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/rxjs/7.0.0-alpha.0/rxjs.umd.js"></script>
+</head>
+
+<body>
+    <button id="btn">点击</button>
+
+    <script>
+
+        var observerArr = []
+
+        function createScheduler() {
+            return new Promise(function (resolve, reject) {
+                const observable = new rxjs.Observable(observer => {
+                    window.observable = observable
+                    window.observer = observer
+                    observerArr.push(observer)
+
+                    resolve({ observable, observer })
+                });
+
+                let tmp = observable.subscribe(e => console.log('1', e))
+                // tmp.unsubscribe()
+            })
+        }
+
+        createScheduler()
+            .then(({ observable, observer }) => {
+                //注册新事件，实际上并不会注册上，因为无法获取到observer属性
+                observer.next('11')
+                observable.subscribe((e) => console.log(2, e))
+                observer.next('22')
+
+                //可见observer始终是第一个
+
+                observerArr[1].next('222') //有效
+
+
+                return { observable, observer }
+            })
+            .then(({ observable, observer }) => {
+                var button = document.getElementById('btn')
+                button.addEventListener('click', (e) => {
+                    // 只有第一个observer会反应
+                    observer.next(e)
+                })
+                return { observable, observer }
+            })
+
+
+
+
+    </script>
+</body>
+
+</html>
