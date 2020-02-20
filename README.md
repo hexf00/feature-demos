@@ -11,6 +11,7 @@
   * [rxjs-study rxjs学习](js/rxjs-study)
   * [g6-study g6学习demo](js/g6-study)
   * [vue-tab 简易tabs控件](js/vue-tab)
+  * [Scheduler 事件监听器](js/Scheduler)
 
 ## 工具
 

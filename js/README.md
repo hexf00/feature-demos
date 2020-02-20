@@ -1,8 +1,12 @@
 # js函数
 
-
 * [避坑-JS删除数组的元素](js-delete-array-item)
 * [思考-JS找出数组中重复元素](js-filter-array-repeat-item)
+* [避坑-JQ事件绑定](jq-event)
+* [rxjs-study rxjs学习](rxjs-study)
+* [g6-study g6学习demo](g6-study)
+* [vue-tab 简易tabs控件](vue-tab)
+* [Scheduler 事件监听器](Scheduler)
 
 ## minix
 
@@ -88,6 +92,7 @@
 * `arguments.callee` 函数指针，值是当前函数传入参数的所有者，相当于函数的`this`，可以用于函数名被重写或函数名不确定的情况
 * `fn.caller` 函数指针，值是当前函数的调用者
 * `arguments.callee.caller.arguments` 调用当前函数的函数的传入参数
+* 将非数组装换为数组，拥有length属性即可 `Array.prototype.slice.apply(arguments)`
 * 参考
   * [《arguments.callee和caller的区别》@niulina](https://www.cnblogs.com/niulina/p/5701404.html)
   * [《call()、apply()、bind()的用法终于理解》@Shd-Study](https://www.cnblogs.com/Shd-Study/p/6560808.html)
