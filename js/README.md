@@ -45,6 +45,30 @@
 * next 方法
 * yield 语法
 
+## 数组
+
+* ES6 中 `Array.of()` 和 `Array()` 作用一致，区别是`Array(number)`的用法是建立一个长度为`number`的数组
+* 如何转换可迭代对象/类数组到数组
+  * 名词解释
+    * **类数组**指是 有`length`属性的**对象** ，详细定义见[](https://tc39.es/ecma262/#sec-lengthofarraylike)、[createlistfromarraylike](https://tc39.es/ecma262/#sec-createlistfromarraylike)
+      * 如`arguments`
+      * `apply`接受的参数要求是类数组
+      * 字符串虽然有`length`，也可以使用下标访问字符，但不符合类数组的定义
+    * **可迭代对象**，也说是**符合迭代器协议**，可迭代对象的含义是实现了`[Symbol.iterator]`属性的对象
+      * 如`arguments`、字符串类型
+  * ES6展开语法
+    * 展开语法要求被操作对象是**可迭代对象**
+    * `[...likeArray]`、`Array.of(...likeArray)`
+  * apply方式
+    * `apply`要求第二个参数是类数组（见`CreateListFromArrayLike`），传递可迭代对象无效，
+    * 调用数组构造方法，this为新数组，将要处理的类数组作为参数传递
+      * `Array()` 因为该构造函数有两种使用方式，所以不适合
+      * `Array.of()`
+
+  * apply方式调用数组实例方法，this 为 要处理的类数组
+    * `Array.prototype.slice`
+    * `Array.prototype.concat`不能应用在传入参数有数组的情况，则数组会被concat合并成元素，造成数据错误
+
 ## 对象
 
 * 几乎所有的 JavaScript 对象都是 Object 的实例；一个典型的对象继承了Object.prototype的属性（包括方法），尽管这些属性可能被遮蔽（亦称为覆盖）。
@@ -92,7 +116,7 @@
 * `arguments.callee` 函数指针，值是当前函数传入参数的所有者，相当于函数的`this`，可以用于函数名被重写或函数名不确定的情况
 * `fn.caller` 函数指针，值是当前函数的调用者
 * `arguments.callee.caller.arguments` 调用当前函数的函数的传入参数
-* 将非数组装换为数组，拥有length属性即可 `Array.prototype.slice.apply(arguments)`
+* 将 `arguments` 转化为数组 `[...arguments]`
 * 参考
   * [《arguments.callee和caller的区别》@niulina](https://www.cnblogs.com/niulina/p/5701404.html)
   * [《call()、apply()、bind()的用法终于理解》@Shd-Study](https://www.cnblogs.com/Shd-Study/p/6560808.html)
