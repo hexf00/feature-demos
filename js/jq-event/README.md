@@ -1,5 +1,9 @@
 # jq 事件相关
 
+## 方法
+
+* jQuery1.5版本引入Deferred功能，`$.ajax()`返回对象`jqXHR`是`XHR`的超集，提供了`error()`、`success()`、`complete()`，在1.8版本取消了这些方法，试用`fail()`、`done()`、`alawys()`代替
+
 ## hover
 
 * `hover`非原生事件，无法作用在`on`、`bind`方法，`hover`只能作用在已经存在的元素

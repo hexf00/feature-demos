@@ -68,6 +68,8 @@
   * apply方式调用数组实例方法，this 为 要处理的类数组
     * `Array.prototype.slice`
     * `Array.prototype.concat`不能应用在传入参数有数组的情况，则数组会被concat合并成元素，造成数据错误
+* 参考
+  * [《javascript中数组和类数组对象（Array-like Object）的区别？》 @sf](https://segmentfault.com/q/1010000016511236)
 
 ## 对象
 
@@ -151,3 +153,9 @@
 * 应用
   * 获取异步数据
   * 转换数据
+
+## TODO
+
+* 函数式计算数组和
+* 函数式数组去重 
+  * http://ehall.szu.edu.cn/gsapp/sys/zsjzapp/index.do#/2020

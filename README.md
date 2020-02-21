@@ -22,7 +22,8 @@
 ## 技术
 
 * [knowledge-graph-note 知识图谱笔记](knowledge-graph-note)
-* [思考-模块化](modular-note)
+* [思考-模块化](programming-note/modular.md)
+* [思考-链式调用](programming-note/chain.md)
 
 ## 产品
 
