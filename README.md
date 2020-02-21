@@ -15,9 +15,9 @@
 
 ## 工具
 
-* [vscode-note VS Code使用笔记](vscode-note)
-* [chrome-note Chrome使用笔记](chrome-note)
-* [windows-note Windows使用笔记](windows-note)
+* [vscode-note VS Code使用笔记](app-note/vscode-note)
+* [chrome-note Chrome使用笔记](app-note/chrome-note)
+* [windows-note Windows使用笔记](app-note/windows-note)
 
 ## 技术
 
