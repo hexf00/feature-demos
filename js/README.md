@@ -40,6 +40,18 @@
 ## 数组
 
 * ES6 中 `Array.of()` 和 `Array()` 作用一致，区别是`Array(number)`的用法是建立一个长度为`number`的数组
+* reduce `[1,2,3,4].reduce((total,item,index,arr)=>{console.log(total,item,index,arr);return total+item;})`
+  * `index`从1开始，如果数组元素只有一个，则不执行`funciton`
+  * `total`在第一次执行时是第一个元素，后面执行时是当前函数的返回值，所以用`a,b`也是合理的
+    * 上面理解或许不对 ，`reduce(item,next)`的理解也是合理的，不过item从第二次开始变成了返回值，但是index从1开始说明这么理解是不合理的
+    * 但`sort(next,item)`的理解是合理的，sort没有第三个参数
+  * 和 `sort` 函数一样，第二个参数才是当前的元素，第1个参数是index+1的元素，同样少执行长度是length-1
+  * `reduce` 接受两个参数，第二个参数可以指定第一次传递的是什么值
+
+    ```js
+    [1,1,2,3,4].reduce((item,next,index)=>{console.log(item,next,index);return item;},[])
+    ```
+
 * 如何转换可迭代对象/类数组到数组
   * 名词解释
     * **类数组**指是 有`length`属性的**对象** ，详细定义见[](https://tc39.es/ecma262/#sec-lengthofarraylike)、[createlistfromarraylike](https://tc39.es/ecma262/#sec-createlistfromarraylike)

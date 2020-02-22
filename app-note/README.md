@@ -2,6 +2,11 @@
 
 * 如果忘记bitwarden的主密码，则只能删除账户无法恢复数据。 [I forgot my master password](https://help.bitwarden.com/article/forgot-master-password/)
 
+## 快速启动一个本地服务器
+
+* `python -m http.server 8000`
+* `php -S 0.0.0.0:8000`
+
 ## git
 
 * `git remote add [shortname] [url]` 添加远程仓库
