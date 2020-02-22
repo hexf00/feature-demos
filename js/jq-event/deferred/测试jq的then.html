@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <script>
+        // 跨域原因需要本地运行
+        // python -m http.server 8000
+
+        // then+fail+always
+        // 前面的出错会中断后面的执行
+        var data = { college: [], profession: [] }
+        $.getJSON("data/college.json").fail((err) => {
+            console.log("加载college出错了", err)
+        }).then((res) => {
+            data.college = res
+            return $.getJSON("data/profession.json").fail((err) => {
+                console.log("加载profession出错", err)
+            })
+        }).then((res) => {
+            data.profession = res
+            return data
+        }).then((data) => {
+            // 对数据做一些操作
+            console.log(data)
+        }).fail(() => {
+            console.log("请求过程中出错")
+        }).always(() => {
+            console.log("更改加载状态")
+        })
+
+
+    </script>
+</body>
+
+</html>
