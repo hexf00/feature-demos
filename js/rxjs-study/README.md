@@ -2,6 +2,15 @@
 
 * 文档 <https://rxjs.dev/guide/overview>
 
+* 用途
+  * 方便进行事件管理，如防抖、定时渲染数据
+    * websocket
+    * dom
+    * ajax
+  * 数据过滤等操作
+
+* 对操作符熟练程度决定rxjs的使用效率
+
 ## 观察者模式
 
 * 发布者（Publisher）
@@ -76,7 +85,12 @@
 
 ## 附录
 
-* [可迭代对象](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#iterable)
+* [可迭代对象 @MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#iterable)
+* [The introduction to Reactive Programming you've been missing @staltz](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754)
+  * [翻译版](https://zhuanlan.zhihu.com/p/25552305)
+* [rxjs学习入门心得(一)Observable可观察对象 @言墨儿](https://www.jianshu.com/p/0ccfb99f6713)
+* [Angular 从0到1：Rx--隐藏在Angular 中的利剑 @接灰的电子产品](https://www.jianshu.com/p/869a3f74d3ca)
+* [Rxjs 响应式编程库 @AiChinaTech](https://blog.csdn.net/sinat_15603323/article/details/88971609)
 
 ## 奇思妙想
 
