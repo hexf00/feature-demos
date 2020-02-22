@@ -1,13 +1,5 @@
 # js函数
 
-* [避坑-JS删除数组的元素](js-delete-array-item)
-* [思考-JS找出数组中重复元素](js-filter-array-repeat-item)
-* [避坑-JQ事件绑定](jq-event)
-* [rxjs-study rxjs学习](rxjs-study)
-* [g6-study g6学习demo](g6-study)
-* [vue-tab 简易tabs控件](vue-tab)
-* [Scheduler 事件监听器](Scheduler)
-
 ## minix
 
 * `assign` 传参 `undefined` 不影响使用
@@ -153,9 +145,3 @@
 * 应用
   * 获取异步数据
   * 转换数据
-
-## TODO
-
-* 函数式计算数组和
-* 函数式数组去重 
-  * http://ehall.szu.edu.cn/gsapp/sys/zsjzapp/index.do#/2020
