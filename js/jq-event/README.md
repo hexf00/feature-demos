@@ -3,13 +3,18 @@
 ## 推荐实践
 
 * `when`+`then`+`fail`+`always`
+* 使用场景：使用`$.Deferred()`将请求构造体和要执行的动作分开，业务代码更加集中
 
 ## 方法
 
 * jQuery1.5版本引入Deferred功能，`$.ajax()`返回对象`jqXHR`是`XHR`的超集，提供了`error()`、`success()`、`complete()`，在1.8版本取消了这些方法，试用`fail()`、`done()`、`alawys()`代替
 * jq也提供`then()`方法，和`done`有差异
   * `then()`会将返回值传递给下一个`then()`，`done`不会传递返回值
-  
+  * `then()`接受两个参数，一个成功的处理函数，一个失败的处理函数
+* `when`方法接受常量、`JQueryPromise`、`JQueryDeferred`对象，`JQueryDeferred.resolve()`会结束该延迟执行对象。
+  * `JQueryDeferred.promise()`的返回值是`JQueryPromise`,都有`then`方法
+
+
 ## hover
 
 * `hover`非原生事件，无法作用在`on`、`bind`方法，`hover`只能作用在已经存在的元素

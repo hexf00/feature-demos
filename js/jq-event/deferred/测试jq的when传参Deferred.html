@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <script>
+        // 跨域原因需要本地运行
+        // python -m http.server 8000
+
+  
+
+        // $.when(1,2)
+        //     .then((data1, data2) => {
+        //         console.log(data1,data2)
+        //     }).fail(() => {
+        //         console.log("过程中出错")
+        //     }).always(() => {
+        //         console.log("更改加载状态")
+        //     })
+
+
+        var d1 = $.Deferred();
+        var d2 = $.Deferred();
+
+        setTimeout(() => {
+            d1.resolve("1");
+            d2.resolve("2");
+        }, 200)
+
+        // $.when(d1, d2)
+        $.when(d1.promise(), d2.promise())
+            .then((data1, data2) => {
+                console.log(data1, data2)
+            }).fail(() => {
+                console.log("过程中出错")
+            }).always(() => {
+                console.log("更改加载状态")
+            })
+
+    </script>
+</body>
+
+</html>
