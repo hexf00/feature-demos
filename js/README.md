@@ -157,3 +157,23 @@
 * 应用
   * 获取异步数据
   * 转换数据
+
+## 模块化写法
+
+* Asynchronous Module Definition (AMD)  `define()` 浏览器中使用，如jquery
+* CommonJS `module.exports`+`require()` Node.js在用
+* UMD ,整合AMD+CommonJS的兼容写法
+* ES6模块写法 `export` `import` 关键字
+  * TS也采用这种
+  * 可以使用这种，JS使用打包工具处理
+* 为什么这么多种，也是历史发展的原因
+* 参考：[JS通用模块模式 UMD @lightsong](https://www.cnblogs.com/lightsong/p/10353278.html)
+
+## 参考
+
+* [一些函数式的技巧让JS代码更优雅](https://zhuanlan.zhihu.com/p/20708731)
+  * 内容摘要
+  * [《JS 函数式编程指南》](https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/)
+  * `_.memoize` 缓存函数返回值
+  * `_.flatten` 解构多维数组
+  * `_.once` 实现单例模式，函数只会被调用一次
