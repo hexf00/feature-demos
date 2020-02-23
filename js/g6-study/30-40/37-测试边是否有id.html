@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tutorial Layout Demo</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script src="https://cdn.staticfile.org/lodash.js/4.17.15/lodash.min.js"></script>
+    <script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g6-3.2.8/build/g6.js"></script>
+
+
+    <script src="https://gw.alipayobjects.com/os/antv/assets/lib/jquery-3.2.1.min.js"></script>
+
+    <style>
+        #graph1,
+        #graph2 {
+            width: 300px;
+            height: 300px;
+            float: left;
+        }
+
+        #graph1 {
+            border: 1px solid #f00;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div style="clear: both;"></div>
+
+
+    <div style="position:absolute;">
+
+        <div id="graph1"></div>
+        <div type="text" id="focus-input"></div>
+
+    </div>
+
+
+    <script>
+
+        // 数据源
+        const data = {
+            nodes: [
+                {
+                    id: 'node0',
+                    label: "a",
+                    x: 100,
+                    y: 100,
+                    size: 20,
+                },
+                {
+                    id: 'node1',
+                    label: "b",
+                    x: 200,
+                    y: 200,
+                    size: 20,
+                },
+                {
+                    id: 'node2',
+                    label: "c",
+                    x: 150,
+                    y: 150,
+                    size: 20,
+                },
+                {
+                    id: 'node3',
+                    label: "d",
+                    x: 150,
+                    y: 250,
+                    size: 20,
+                },
+                {
+                    id: 'node4',
+                    label: "??",
+                    x: 150,
+                    y: 200,
+                    size: 20,
+                },
+                {
+                    id: 'node5',
+                    label: "??",
+                    x: 90,
+                    y: 100,
+                    size: 20,
+                },
+            ],
+            edges: [
+                {
+                    id: 'edge0',
+                    source: 'node0',
+                    target: 'node1',
+                },
+                {
+                    id: 'edge1',
+                    source: 'node2',
+                    target: 'node3',
+                },
+            ],
+        };
+
+
+        const graph1 = new G6.Graph({
+            container: 'graph1',  // String | HTMLElement，必须，容器 id 或容器本身
+            width: Math.floor($('#graph1').width()),              // Number，必须，图的宽度
+            height: Math.floor($('#graph1').height()),             // Number，必须，图的高度
+            // renderer: "svg",
+            modes: {
+                default: ['drag-canvas', 'zoom-canvas']
+            },
+            defaultEdge: {
+                style: {
+                    endArrow: true,
+                    lineWidth: 3
+                }
+            },
+            nodeStateStyles: {
+                selected: {
+                    // hover 状态为 true 时的样式
+                    fill: '#d3adf7',
+                },
+            },
+            edgeStateStyles: {
+                hover: {
+                    stroke: '#f00'
+                },
+                // click 状态为 true 时的样式
+                selected: {
+                    stroke: '#f00'
+                }
+            },
+            animate: true            // Boolean，可选，切换布局时是否使用动画过度
+        });
+        
+        graph1.data(data);
+        graph1.render();
+
+    </script>
+
+</body>
+
+</html>
