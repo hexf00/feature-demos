@@ -3,6 +3,7 @@
 g6 学习笔记记录。
 
 * node和edge都可以有id
+* graph.addItem方式加入的节点必须要传入x、y，设置x,y后调用graph.layout()并不会重新布局（需要验证）
 
 ## doc/demo
 
