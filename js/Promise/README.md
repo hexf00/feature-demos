@@ -15,6 +15,7 @@
 * Promise 对象不是函数，不能使用`()`执行，`then()`也并非执行的意思，而是注册在改对象状态变成完成时所执行的函数
 * 链条上任意位置catch后，如果该catch函数不返回Promise.reject()，会导致后面Promise对象继续允许，末端catch无法捕捉到错误
   * 非末端catch 记得返回`Promise.reject(err)`，防止逻辑错误
+  * 这就导致末端一定要由catch终止链条
 
 ## 用法
 
