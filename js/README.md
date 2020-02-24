@@ -1,5 +1,9 @@
 # js函数
 
+* `moment("1995").fromNow()//25年前` 返回人性化的时间
+  * `moment().diff(time, 'seconds') < 44` 注意，如果44秒内，都会展示为数秒前，时间显示并不一定符合我们的期望，所以需要作额外处理
+* `moment().diff("2020-02-24", 'seconds')//82375` 返回某个时间距离现在的秒数
+
 ## minix
 
 * `assign` 传参 `undefined` 不影响使用

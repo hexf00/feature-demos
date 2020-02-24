@@ -1,7 +1,14 @@
 # 笔记
 
+* `JSON.stringify(obj,null,2)` JSON序列化的时候同时格式化，美化缩进
+* `edge.getModel()` 有不同的实现，如果`.get('model')`无法JSON序列化
+* `graph.addItem` 方法不会重新布局，应该要提供x,y信息
+* `graph.removeItem` 删除node会删除与node关联的edge
 * 监听图数据的变化
   * `graph`事件 `afteradditem`/`afterremoveitem`/`afterupdateitem` 是由`graph`上的API触发的，`item`上的API不会触发
+* 如何实现边唯一，边关系去重添加
+  * 方法1，插入时，遍历edges关系集合，查出是否存在相同的数据，如`edges.find(edge => source == edge.source && target == edge.target)`
+  * 方法2，插入前，获取target.edges关系集合，查出是否存在相同的数据，相比方法1，无论是否有缓存支持都因为缩小了范围效率更高
 
 ## 更新节点数据函数
 
