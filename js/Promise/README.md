@@ -1,5 +1,6 @@
 # Promise
 
+* `末端catch`比`then(done,fail)`的优越性体现在对链上的`then`都生效。
 * Promise是ES6中添加的**处理异步操作**的一个工具
 * Promise是可以使用纯JS实现的
 * Promise的**本质**是 **对异步操作的回调函数的提前注册**，并非链式调用，使用非链式调用也可以实现`Promise`
