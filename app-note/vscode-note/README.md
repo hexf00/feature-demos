@@ -1,5 +1,8 @@
 # VSCODE 使用笔记
 
+* [Key Bindings for Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings)
+* [vscode常用快捷键 @awkflf11](https://www.cnblogs.com/awkflf11/p/9412344.html)
+* `ctrl+shift+\`   反斜杠是在括号首尾跳转
 * markdown 使用什么样的 文件名更好？
   * 如果都是用README.md
     * 本地跳转略有不便，安装ctrl跳转
