@@ -36,5 +36,6 @@ const app = new Vue({
   * `afterEach((to, from) => {`
 * 组件守卫
   * `beforeRouteEnter(to, from, next)` `this`无法获取到组件实例，无法使用 `this`
+    * 这导致很多数据获取的代码都不能放在vue实例内部
   * `beforeRouteUpdate(to, from, next)` `/foo/:id` 同一个组件不同的参数会重新渲染
   * `beforeRouteLeave(to, from, next)` 导航离开时的调用
