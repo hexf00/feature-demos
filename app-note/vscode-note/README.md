@@ -1,5 +1,11 @@
 # VSCODE 使用笔记
 
+## 插件
+
+* es6-string-html 便于使用古老的方式开发
+
+## 杂项
+
 * [Key Bindings for Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings)
 * [vscode常用快捷键 @awkflf11](https://www.cnblogs.com/awkflf11/p/9412344.html)
 * `ctrl+shift+\`   反斜杠是在括号首尾跳转
