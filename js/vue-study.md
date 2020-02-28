@@ -1,7 +1,19 @@
 # vue笔记
 
+## 刷新路由组件的方法
+
+* v-if 方法是刷新
+  * `this.load = false;this.$nextTick(() => (this.load = true))`
+
+* url加时间戳，且需要配置router-view的key
+* router.go(0) 会导致静态资源被重新请求
+  * window.location.reload() 类似
+* vm.$router.replace() 调用两次，第一次访问不存在的url，第二次访问当前URL
+* 进入一个不存在的页面，router.go(-1)再返回上一页
+
 ## vue-router
 
+* [Vue Router @vuejs](https://router.vuejs.org/zh/)
 * `Vue.use(VueRouter)`, `script` 标签方式无须手动安装
 * 注册
 
@@ -20,6 +32,7 @@ const app = new Vue({
   好处：不需要在每个组件中都导入路由。
 
 * `<router-view></router-view>`
+  * 可以指定key，` :key="$route.path"`
 * `<router-link to="/foo">Go to Foo</router-link>` 
 
   注意：匹配成功会添加 `class=router-link-active`
