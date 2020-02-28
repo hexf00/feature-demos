@@ -1,4 +1,19 @@
-# UI 设计技术细节
+# UI
+
+## UI框架（偏设计）
+
+* Bootstrap
+  * 提供css和jq插件，也有各种mvvm的实现，有2、3、4版本
+* layui
+  * 基于jq
+* [b-jui](http://www.b-jui.com/)
+  * 基于jq
+* element
+* pure.css
+  * 只有栅格、表格、表单等基本样式
+* ant-design
+
+## 设计技术细节
 
 * 路由守卫 可以做什么
   * 阻止路由，用于权限判断
@@ -22,3 +37,6 @@
   从技术角度讲，两种方式都不错 —— 就看你的用户想要的体验是哪种。
 
   参考：[数据获取 @VueRouter](https://router.vuejs.org/zh/guide/advanced/data-fetching.html)
+
+| Bootstrap | 提供css和jq插件，也有各种mvvm的实现，有2、3、4版本 |
+| element ||
