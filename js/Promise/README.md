@@ -11,6 +11,29 @@
 ## 实践
 
 * 避免没有必要的嵌套 Promise
+
+  ```js
+  function(){
+    return new Promise((resolve, reject) => {
+      this.getData().then((list) => {
+        //操作
+        resolve(data);
+      }).catch(err => reject(err))
+    })
+  }
+  ```
+  
+  可以优化为
+  
+  ```js
+  function(){
+    return this.getData().then((list) => {
+      //操作
+      return data; //错误时 return Promise.reject(错误信息)
+    })
+  }
+  ```
+
 * 记得用 catch 终止链
 * Promise 的嵌套是没有必要的，但也是没有副作用的
 * Promise 对象不是函数，不能使用`()`执行，`then()`也并非执行的意思，而是注册在改对象状态变成完成时所执行的函数

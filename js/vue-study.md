@@ -50,5 +50,8 @@ const app = new Vue({
 * 组件守卫
   * `beforeRouteEnter(to, from, next)` `this`无法获取到组件实例，无法使用 `this`
     * 这导致很多数据获取的代码都不能放在vue实例内部
+    * 从其它url进入触发beforeRouteEnter
   * `beforeRouteUpdate(to, from, next)` `/foo/:id` 同一个组件不同的参数会重新渲染
+    * 手动改变URL的参数会触发
+    * 从其它路由进入不会触发beforeRouteUpdate，而是触发beforeRouteEnter
   * `beforeRouteLeave(to, from, next)` 导航离开时的调用
