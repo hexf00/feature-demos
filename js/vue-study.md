@@ -1,5 +1,9 @@
 # vue笔记
 
+## 组件
+
+* data方法只会在组件初始化时候运行一次,更新数据不会重复触发data方法
+
 ## 刷新路由组件的方法
 
 * v-if 方法是刷新
@@ -33,6 +37,7 @@ const app = new Vue({
 
 * `<router-view></router-view>`
   * 可以指定key，` :key="$route.path"`
+  *  `replace` 可以直接替换
 * `<router-link to="/foo">Go to Foo</router-link>` 
 
   注意：匹配成功会添加 `class=router-link-active`
@@ -49,9 +54,12 @@ const app = new Vue({
   * `afterEach((to, from) => {`
 * 组件守卫
   * `beforeRouteEnter(to, from, next)` `this`无法获取到组件实例，无法使用 `this`
+    * 第一次进入，无法通过this读取组件实例
     * 这导致很多数据获取的代码都不能放在vue实例内部
+    * 初始化数据
     * 从其它url进入触发beforeRouteEnter
   * `beforeRouteUpdate(to, from, next)` `/foo/:id` 同一个组件不同的参数会重新渲染
     * 手动改变URL的参数会触发
     * 从其它路由进入不会触发beforeRouteUpdate，而是触发beforeRouteEnter
+    * 重复进入要重置数据后再初始化数据(可以代码复用),或者直接更新数据(需要写两套代码)
   * `beforeRouteLeave(to, from, next)` 导航离开时的调用

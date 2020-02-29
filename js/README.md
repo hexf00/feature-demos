@@ -118,6 +118,10 @@
 * 函数有两种定义方式，一种是普通函数，一种是箭头函数
   * 区别1 箭头的函数的作用域被强行设置为fn定义时的`this`
   * 区别2 箭头函数不能直接读取自身`arguments`
+  * 什么时候用到箭头函数
+    * 需要保留当前的this作用域
+      * 丢失this作用域 `_.throttle(this.saveToLocalStorage,100)`
+      * 改写后 `_.throttle(() => this.saveToLocalStorage(),100)`
 * `Function()`构造函数 和 `eval()` 都可以动态创建函数，区别是执行的作用域，`Function`动态创建的函数可以用在全局作用域，但会有安全问题。
 * `fn.call(newThis, arguments...)` 改变`this`指针并调用
   * 应用 `ParentClass.call(this)` 在子类构造函数调用父类构造方法
