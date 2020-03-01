@@ -1,8 +1,20 @@
 # vue笔记
 
+* [$createElement()](https://cn.vuejs.org/v2/guide/render-function.html#createElement-%E5%8F%82%E6%95%B0) 用来创建Dom,可以被更方便的JSX代替
+
 ## 组件
 
+* mixins 选项合并组件,可以将公共方法放在一起 
+  * [mixins @Vue](https://cn.vuejs.org/v2/guide/mixins.html)
 * data方法只会在组件初始化时候运行一次,更新数据不会重复触发data方法
+* [Msgbox的实现 @element](https://github.com/ElemeFE/element/blob/059448bf7dee7200c3413cf9d4546fd442e63de7/packages/message-box/src/main.js#L17)
+  
+  ```js
+  var msgbox = new component(el: document.createElement('div')) ;
+  document.body.appendChild(msgbox.$el);
+  ```
+
+  * [notification的实现 @element](https://github.com/ElemeFE/element/blob/ec3326e0bc7e30d2da8ecea21732eff09726ed7f/packages/notification/src/main.js)
 
 ## 刷新路由组件的方法
 

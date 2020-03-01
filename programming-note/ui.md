@@ -1,6 +1,15 @@
 # UI
 
-## UI框架（偏设计）
+## UI工具(偏专一类型的库)
+
+* ztree
+* [toastr @CodeSeven](https://github.com/CodeSeven/toastr)
+  * success/info/warning/error 4个方法
+  * 连续触发有点卡卡的
+  * 不能保持界面上仅仅有一个提示
+* layer
+
+## UI框架（偏全面）
 
 * Bootstrap
   * 提供css和jq插件，也有各种mvvm的实现，有2、3、4版本
@@ -8,7 +17,7 @@
   * 基于jq
 * [b-jui](http://www.b-jui.com/)
   * 基于jq
-* element
+* [element](https://element.eleme.cn/)
 * pure.css
   * 只有栅格、表格、表单等基本样式
 * ant-design

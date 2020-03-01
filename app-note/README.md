@@ -1,5 +1,6 @@
 # 软件使用笔记
 
+* PC微信撤回会导致已经下载的文件丢失. 2.8.0.121
 * 如果忘记bitwarden的主密码，则只能删除账户无法恢复数据。 [I forgot my master password](https://help.bitwarden.com/article/forgot-master-password/)
 
 ## 快速启动一个本地服务器
