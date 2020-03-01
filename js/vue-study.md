@@ -1,10 +1,11 @@
 # vue笔记
 
+* prop,data 可以是一个类,但是会被监听
 * [$createElement()](https://cn.vuejs.org/v2/guide/render-function.html#createElement-%E5%8F%82%E6%95%B0) 用来创建Dom,可以被更方便的JSX代替
 
 ## 组件
 
-* mixins 选项合并组件,可以将公共方法放在一起 
+* mixins 选项合并组件,可以将公共方法放在一起
   * [mixins @Vue](https://cn.vuejs.org/v2/guide/mixins.html)
 * data方法只会在组件初始化时候运行一次,更新数据不会重复触发data方法
 * [Msgbox的实现 @element](https://github.com/ElemeFE/element/blob/059448bf7dee7200c3413cf9d4546fd442e63de7/packages/message-box/src/main.js#L17)
@@ -50,11 +51,11 @@ const app = new Vue({
 * `<router-view></router-view>`
   * 可以指定key，` :key="$route.path"`
   *  `replace` 可以直接替换
-* `<router-link to="/foo">Go to Foo</router-link>` 
+* `<router-link to="/foo">Go to Foo</router-link>`
 
   注意：匹配成功会添加 `class=router-link-active`
 
-* 参数或查询的改变并不会触发进入/离开的路由守卫 
+* 参数或查询的改变并不会触发进入/离开的路由守卫
 * 全局守卫
   * `beforeEach((to, from, next)=>{})`
     * 一定要执行 `next`, 否则钩子就不会被 resolved

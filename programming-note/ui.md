@@ -46,6 +46,3 @@
   从技术角度讲，两种方式都不错 —— 就看你的用户想要的体验是哪种。
 
   参考：[数据获取 @VueRouter](https://router.vuejs.org/zh/guide/advanced/data-fetching.html)
-
-| Bootstrap | 提供css和jq插件，也有各种mvvm的实现，有2、3、4版本 |
-| element ||
