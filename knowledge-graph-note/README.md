@@ -5,6 +5,14 @@
 知识图谱相关概念提出较久，也发展了很多年。
 初略了解，该领域拥有的规范和格式定义比较多，也有一些大组织发布的标准，学术和商业使用的技术亦有差异。
 
+## 参考学科
+
+* 哲学（逻辑部分）
+* 逻辑学
+* 语言学
+* 语义学
+* 术语学
+
 ## 基础概念
 
 * [词语/word](word.md)
@@ -63,6 +71,10 @@
   * turtle
 * 三元组
 * RDF
+* 语料库工具
+  * Trados
+  * memoQ
+  * tmxmall
 
 ## 应用
 
@@ -75,10 +87,19 @@
 * 医疗行业用途
   * [新冠病毒相关开放知识图谱](https://mp.weixin.qq.com/s/Qv_FC1bbJFh6ZswMLit9rA)
 * 概念图
+* 文档对齐
+* 翻译
+* 术语查询
+* LQA Linguisitic Quality Assurance 语言质量保证
 
 ## 入门参考
 
 * [知识图谱（Knowledge Graph）简介 @Explaliner](https://zhuanlan.zhihu.com/p/45470163) 发展和技术细节简要
+* [Unified Medical Language System UMLS](https://www.nlm.nih.gov/research/umls/index.html)
+  
+  美国国立医学图书馆持续开发了20多年的巨型医学术语系统.200万个医学概念,500多万个医学词汇。
+  医疗领域最为完备的知识图谱体系，算是领域内的最佳实践。
+  可以参考它的语义类型的设计和语义关系的设计。
 
 ## 附录
 
