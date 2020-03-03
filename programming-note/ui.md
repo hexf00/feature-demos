@@ -1,5 +1,11 @@
 # UI
 
+## UI框架(偏框架)
+
+* vue
+* angular
+* react
+
 ## UI工具(偏专一类型的库)
 
 * ztree
@@ -8,6 +14,17 @@
   * 连续触发有点卡卡的
   * 不能保持界面上仅仅有一个提示
 * layer
+* moment 人性化显示时间
+
+  ```html
+  <script src="https://cdn.staticfile.org/moment.js/2.24.0/moment.js"></script>
+  <script src="https://cdn.staticfile.org/moment.js/2.24.0/locale/zh-cn.js"></script>
+  ```
+
+* lodash 通用函数库
+* echarts/g2
+* g6
+* normalize.css 统一不同浏览器的差异
 
 ## UI框架（偏全面）
 
