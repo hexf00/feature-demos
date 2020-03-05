@@ -1,5 +1,9 @@
 # 编程的思考
 
+## 简化编程成本提高效率
+
+* DB库提供的relation功能
+
 ## 同步还是异步的代码
 
 * `This may be converted to an async function.ts(80006)`
