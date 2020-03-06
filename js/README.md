@@ -123,6 +123,8 @@
       * 丢失this作用域 `_.throttle(this.saveToLocalStorage,100)`
       * 改写后 `_.throttle(() => this.saveToLocalStorage(),100)`
 * `Function()`构造函数 和 `eval()` 都可以动态创建函数，区别是执行的作用域，`Function`动态创建的函数可以用在全局作用域，但会有安全问题。
+  * eval也可以访问全局作用域
+  * 有时候出错，两种方式堆栈都没有代码打印出来，但是console会显示代码
 * `fn.call(newThis, arguments...)` 改变`this`指针并调用
   * 应用 `ParentClass.call(this)` 在子类构造函数调用父类构造方法
 * `fn.apply(newThis, [arguments...])` 改变`this`指针并调用，参数以数组格式传入
