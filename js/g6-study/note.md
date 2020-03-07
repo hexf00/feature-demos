@@ -1,5 +1,16 @@
 # 笔记
 
+* 清除布局信息，但不如新建画布绘制更快
+
+  ```js
+  // 恢复默认，删除布局
+  let layoutController = graph.get('layoutController');
+  layoutController.layoutCfg = {};
+  layoutController.layoutType = layoutController.layoutCfg.type;
+  layoutController.worker = null;
+  layoutController.workerData = {};
+  ```
+
 * `JSON.stringify(obj,null,2)` JSON序列化的时候同时格式化，美化缩进
 * `edge.getModel()` 有不同的实现，如果`.get('model')`无法JSON序列化
 * `graph.addItem` 方法不会重新布局，应该要提供x,y信息
@@ -9,6 +20,35 @@
 * 如何实现边唯一，边关系去重添加
   * 方法1，插入时，遍历edges关系集合，查出是否存在相同的数据，如`edges.find(edge => source == edge.source && target == edge.target)`
   * 方法2，插入前，获取target.edges关系集合，查出是否存在相同的数据，相比方法1，无论是否有缓存支持都因为缩小了范围效率更高
+
+## 如何重新绘图  更新数据/更新布局
+
+* 销毁画布重新绘制
+* `changeData()`
+  * 有动画
+* `clear()+data()+render()`
+* 不`clear()`会导致花费特别多的时间
+  * 内部就是data赋值`{nodes:[],edges:[]}`
+    * `graph.changeData({ nodes: [], edges: [] })`
+  * fruchterman布局
+    * 初始化     1.5s  
+    * 不重置数据 16s
+    * 重置数据   5s  ，第二次开始速度为2.5s（可能有JIT加速原因）
+  * 设置autoPaint=false不影响速度
+
+    ```js
+    const autoPaint = graph.get('autoPaint');
+    graph.setAutoPaint(false);
+    graph.paint();
+    graph.setAutoPaint(autoPaint);
+    ```
+
+    ```js
+    // graph.clear()
+    // graph.refresh()
+    // graph.data(g6Data)
+    // graph.render()
+    ```
 
 ## 更新节点数据函数
 

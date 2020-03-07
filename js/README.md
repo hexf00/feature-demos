@@ -4,6 +4,21 @@
   * `moment().diff(time, 'seconds') < 44` 注意，如果44秒内，都会展示为数秒前，时间显示并不一定符合我们的期望，所以需要作额外处理
 * `moment().diff("2020-02-24", 'seconds')//82375` 返回某个时间距离现在的秒数
 
+## DOM操作细节
+
+* file的onchange oninput ，如果想要同一个文件重复执行，需要手动将value设置为空
+
+## 性能优化技术
+
+* setTimeout 延迟执行
+* Worker 多线程，无法与DOM交互
+  * [Web Worker 使用教程 @ruanyifeng](http://www.ruanyifeng.com/blog/2018/07/web-worker.html)
+
+## 对象
+
+* `hasOwnProperty('key')` 判断对象是否包含特定的自身（非继承）属性，比直接判断好，避免出错
+  * [hasOwnProperty @MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)
+
 ## minix
 
 * `assign` 传参 `undefined` 不影响使用
@@ -67,6 +82,8 @@
   * ES6展开语法
     * 展开语法要求被操作对象是**可迭代对象**
     * `[...likeArray]`、`Array.of(...likeArray)`
+    * `{...obj}` 也是合理用法
+      * `{a:1,...obj}` 可以合并对象
   * apply方式
     * `apply`要求第二个参数是类数组（见`CreateListFromArrayLike`），传递可迭代对象无效，
     * 调用数组构造方法，this为新数组，将要处理的类数组作为参数传递
