@@ -40,3 +40,7 @@
 * `git remote add [shortname] [url]` 添加远程仓库
 * `git fetch [remote shortname]` 拉取指定远程仓库
 * 在vsc中进行合并
+* 查看github仓库大小
+  * `https://api.github.com/repos/{owner}/{repo}` 
+    * size 单位为kb
+  * [chrome插件 github-repo-size](https://github.com/harshjv/github-repo-size)
