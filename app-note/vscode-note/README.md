@@ -1,5 +1,14 @@
 # VSCODE 使用笔记
 
+## 快捷键
+
+* 快速折叠代码块
+  * 折叠/展开当前代码块 `ctrl+shift+[` `ctrl+shift+]`
+  * 折叠/展开 整个文件 `ctrl+k ctrl+0` `ctrl+k ctrl+]或j`
+  * 折叠/展开 整个文件到具体层  `ctrl+k ctrl+2/3`
+* `ctrl+tab`
+  * 打开上一个编辑过的文件，是一个编辑历史的堆栈列表
+
 ## 插件
 
 * es6-string-html 便于使用古老的方式开发 [template_strings @MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/template_strings)
