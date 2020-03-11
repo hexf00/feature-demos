@@ -41,6 +41,25 @@
 * `git fetch [remote shortname]` 拉取指定远程仓库
 * 在vsc中进行合并
 * 查看github仓库大小
-  * `https://api.github.com/repos/{owner}/{repo}` 
+  * `https://api.github.com/repos/{owner}/{repo}`
     * size 单位为kb
   * [chrome插件 github-repo-size](https://github.com/harshjv/github-repo-size)
+
+* [commit如何写参考](https://open.leancloud.cn/git-commit-message/)
+
+  ```text
+  类型(可选的范畴): 简短描述
+
+  可选的详情
+
+  可选的注解
+  ```
+
+  * 类型 `feat/fix/chore/test/refactor/style/cosm/docs/build: xxx`
+  * perf属于feat
+  * 文字内容对外部用户的内容是feat，对开发团队的是docs
+    * 破坏兼容性的改动需要添加`!`，详情需要 `BREAKING:` 开头说明改动具体影响和原因
+    * 如果使用了范畴，需要在文档中解释
+  * 每行不超过72字母
+  * 注解是与自动化工具集成的信息，如关闭issue
+  * 动词使用一般现在时

@@ -27,3 +27,4 @@
 * minimap和序号区，绿色表示新增行，蓝色表示修改行。
 * minimap只展示上下一部分的代码缩略图。
 * `code -d "{file1}" "{file2}"` 可以调用文本差异比较工具，搭配quicker使用。
+* 避免重复输入git登录密码，仓库位置运行`git config --global credential.helper store`后重启ide
