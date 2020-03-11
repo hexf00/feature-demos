@@ -24,8 +24,10 @@
 
 * lodash 通用函数库
 * echarts/g2
+  * echarts在性能优化上明显比g系列高几个档次
 * g6
 * normalize.css 统一不同浏览器的差异
+* ace_editor 代码编辑器，echarts/KodExplorer在用
 
 ## UI框架（偏全面）
 

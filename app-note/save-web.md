@@ -129,6 +129,8 @@
   * [批处理手动实现下载css中的图片并重命名](https://www.wanweiwang.cn/FAQ/view/969.html)
 * 实际使用
   * 下载单页html，或者下载css及资源文件，支持跨域，不能下载js动态导入的文件
+    * 对于多语言的页面，需要考虑传递对应的语言`Accept-Language: zh-CN,zh;q=0.9`。
+    * 应用，下载electron all文档
 
     ```bash
     wget
