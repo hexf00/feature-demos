@@ -3,6 +3,11 @@
 * prop,data 可以是一个类,但是会被监听
 * [$createElement()](https://cn.vuejs.org/v2/guide/render-function.html#createElement-%E5%8F%82%E6%95%B0) 用来创建Dom,可以被更方便的JSX代替
 
+## 使用细节
+
+* 不能直接在data上增加属性，即不允许动态添加根级响应式属性。
+  * [参考](https://segmentfault.com/q/1010000008472683)
+
 ## 组件与数据流、响应式
 
 * 在往一个响应式对象上添加新属性时需要使用vue.set方法
@@ -12,7 +17,7 @@
   * 细节：如果上层传递的是数组，则子组件中push、splice操作后，无需$emit就会导致watch被触发
     * 细节： 修改数组中的对象的值不会导致watch被触发
     * 如果上层没有传递，是undefined，则子组件中push、splice操作，会触发watch，但因为没有$emit，也没有引用，所以上层依然不能拿到组件更改后的数据
-  * 总结：watch用于监听上层数据的改变 
+  * 总结：watch用于监听上层数据的改变
 
 * 如果子组件只需要传值，不需要校验，能不能直接**使用对象的引用特性**直接改变上层数据，可以提升性能？
   * 场景：输入控件
@@ -37,6 +42,23 @@
   ```
 
   * [notification的实现 @element](https://github.com/ElemeFE/element/blob/ec3326e0bc7e30d2da8ecea21732eff09726ed7f/packages/notification/src/main.js)
+    * 原理 其它动态组件也可以这么实现
+
+      ```js
+      //注册全局方法
+      function Notification(){
+        //动态示例化组件
+        instance = new Component()
+        instance.$mount();
+        //追加到dom
+        document.body.appendChild(instance.$el);
+      }
+      ```
+
+* 组件之间如何传递dom
+  * solt
+  * [$createElement](https://www.jianshu.com/p/84cd41a5009c)
+    * 相比solt方式，可以以代码的形式传递dom，直接传递文本是存在问题的
 
 ## 刷新路由组件的方法
 

@@ -1,10 +1,13 @@
 # electronjs
 
 * 优势： web技术/开源/跨平台/生态成熟
+  * 兼容 Mac、Windows 和 Linux，不含移动端
+  * PhoneGap提供桌面打包，基于electron
+
 * [官网](https://www.electronjs.org/)
   * 官网文档来源于github
 * [术语表](https://www.electronjs.org/docs/glossary)
-* 兼容 Mac、Windows 和 Linux，不含移动端
+* [文档目录](https://www.electronjs.org/docs)
 
 * 构成
   * Node
@@ -38,8 +41,12 @@
     * ready时间触发以前不应该使用
 
 * demos&source
-  * [探索 Electron 的 API](https://github.com/electron/electron-api-demos)
-  * [Electron Fiddle](https://www.electronjs.org/fiddle) 类似小程序IDE，集成了VCS的编辑器Monaco，根据Electron版本自动更新语法提示
+  * [electron-quick-start](https://github.com/electron/electron-quick-start) 示例项目
+  * [API示例 demo](https://github.com/electron/electron-api-demos)
+  * [Electron Fiddle](https://www.electronjs.org/fiddle) 类似一个小程序IDE，快速开发demo应用，集成了VCS的编辑器Monaco，根据Electron版本自动切换语法提示
+  * `C:\Users\hexf00\AppData\Roaming\Electron Fiddle\electron-bin\8.0.2` 存放目录
+  * 可以使用`electron-forge` 导出安装应用
+    * `electron-forge make`
 
 * 类库
   * [Squirrel.Windows](https://github.com/Squirrel/Squirrel.Windows) 像Chrome那样点击一次就工作

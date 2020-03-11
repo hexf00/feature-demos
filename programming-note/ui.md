@@ -10,6 +10,7 @@
 
 * ztree
 * [toastr @CodeSeven](https://github.com/CodeSeven/toastr)
+  * [在线demo](https://codeseven.github.io/toastr/demo.html)
   * success/info/warning/error 4个方法
   * 连续触发有点卡卡的
   * 不能保持界面上仅仅有一个提示
@@ -35,6 +36,8 @@
 * [b-jui](http://www.b-jui.com/)
   * 基于jq
 * [element](https://element.eleme.cn/)
+  * [组件文档](https://element.eleme.cn/#/zh-CN/component/installation)
+
 * pure.css
   * 只有栅格、表格、表单等基本样式
 * ant-design

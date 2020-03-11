@@ -96,8 +96,6 @@
 * 参考
   * [《javascript中数组和类数组对象（Array-like Object）的区别？》 @sf](https://segmentfault.com/q/1010000016511236)
 
-## 对象
-
 * 几乎所有的 JavaScript 对象都是 Object 的实例；一个典型的对象继承了Object.prototype的属性（包括方法），尽管这些属性可能被遮蔽（亦称为覆盖）。
 * `new constructor[([arguments])]`，可以不传递参数
   * 步骤
@@ -180,7 +178,12 @@
 * 并发
   * 抛弃过期数据
   * 取消过期任务
-* 防抖/节流
+* 事件管理器
+  * [js实现on emit](https://www.cnblogs.com/aisiqi-love/p/10594461.html) 原理是 注册回调到对象数组，事件触发循环调用数组元素
+* 防抖（debounce）/节流（debounce）
+  * 节流 将指定时间长度内的多次动作变成1次动作执行
+  * 防抖 动作触发后等待指定时间长度，没有第2次动作则动作执行
+  * 参考 [Lodash之throttle（节流）与debounce（防抖）总结 @dreamsqin](https://www.cnblogs.com/dreamsqin/p/11305028.html)
 * 应用
   * 获取异步数据
   * 转换数据
