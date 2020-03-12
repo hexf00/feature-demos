@@ -26,6 +26,12 @@
         * `npx webpack -v` `npx webpack-cli -v`
           * 当前版本分别为 4.42.0  3.3.11
 
+* 最简单的用法
+
+  `npx webpack --entry=".\src\demo1\index.js" --output-filename="demo1.js" --mode=development`
+
+  index.js 通过import 引入了其它的js文件
+
 * Entry
 * Module
 * Chunk
