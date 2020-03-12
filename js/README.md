@@ -197,6 +197,9 @@
   * TS也采用这种
   * 可以使用这种，JS使用打包工具处理
 * 为什么这么多种，也是历史发展的原因
+* require 是不同于import的
+  * require是运行时的，是一个函数，值传递
+  * import是编译时，是一个语法，引用传递
 * 参考：[JS通用模块模式 UMD @lightsong](https://www.cnblogs.com/lightsong/p/10353278.html)
 
 ## 参考
