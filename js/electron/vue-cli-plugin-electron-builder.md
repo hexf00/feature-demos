@@ -2,7 +2,6 @@
 
 * [文档](https://nklayman.github.io/vue-cli-plugin-electron-builder/)
 
-
 它是vue-cli的一个插件，主要用途是把vue-cli的项目使用electron技术栈打包为可以分发的二进制程序。
 该插件的底层打包使用的是 `electron-builder`。
 

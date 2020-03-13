@@ -190,17 +190,19 @@
 
 ## 模块化写法
 
-* Asynchronous Module Definition (AMD)  `define()` 浏览器中使用，如jquery
+* Asynchronous Module Definition (AMD)  `define([],()=>)+requre([],()=>)` 浏览器中使用，如jquery
 * CommonJS `module.exports`+`require()` Node.js在用
 * UMD ,整合AMD+CommonJS的兼容写法
 * ES6模块写法 `export` `import` 关键字
   * TS也采用这种
   * 可以使用这种，JS使用打包工具处理
+* `import()` webpack提供支持
 * 为什么这么多种，也是历史发展的原因
 * require 是不同于import的
   * require是运行时的，是一个函数，值传递
   * import是编译时，是一个语法，引用传递
 * 参考：[JS通用模块模式 UMD @lightsong](https://www.cnblogs.com/lightsong/p/10353278.html)
+* [default @MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/default)
 
 ## 参考
 
