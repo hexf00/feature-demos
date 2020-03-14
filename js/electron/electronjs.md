@@ -1,5 +1,7 @@
 # electronjs
 
+* [文档目录](https://www.electronjs.org/docs)
+
 * 优势： web技术/开源/跨平台/生态成熟
   * 兼容 Mac、Windows 和 Linux，不含移动端
   * PhoneGap提供桌面打包，基于electron
@@ -7,7 +9,9 @@
 * [官网](https://www.electronjs.org/)
   * 官网文档来源于github
 * [术语表](https://www.electronjs.org/docs/glossary)
-* [文档目录](https://www.electronjs.org/docs)
+  * IPC 代表 Inter-Process Communication进程间通信。Electron 使用 IPC 来在main主进程和renderer渲染进程之间传递 JSON 信息。
+  * IDL 接口描述语言。用一种格式撰写函数签名和数据类型，被用于生成 Java, C++, JavaScript, 等程序接口。
+  * webview 网页线程，与electron是隔离的，保证安全
 
 * 构成
   * Node
@@ -56,6 +60,15 @@
     * 增量更新包
     * 后台更新，不中断用户，无需重启
     * [完整](https://github.com/Squirrel/Squirrel.Windows/blob/develop/docs/goals.md)
+
+## 打包
+
+* win支持的格式种类
+* nsis（安装程序）
+* nsis web（web安装程序）
+* portable（未安装的便携应用程序）
+* AppX（Windows Store）
+* Squirrel.Windows
 
 ## 概念及其关系梳理
 
@@ -117,3 +130,11 @@
   * 关闭新窗口权限，新窗口可能具有默认权限
   * 限制remote模块的使用 防止原型污染攻击
   * 远程内容上下文隔离
+
+## 杂项
+
+* `/node_modules/.bin/electron.cmd` 查看项目内的electron的版本
+  * `./node_modules/.bin/electron.cmd -v` 只看electron的版本
+* `C:\Users\hexf00\AppData\Local\electron\Cache` electron缓存路径
+  * 缓存目录详见[electron-download](https://github.com/electron-userland/electron-download)，可以通过`ELECTRON_CACHE`变量更改
+    * 该项目目前已经变更名称为[get](https://github.com/electron/get)

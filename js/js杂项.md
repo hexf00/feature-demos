@@ -7,3 +7,6 @@
     * 没有会当作是本地时间
   * [ECMA标准参考 时间](http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15)
   * JSON序列化后会保存UTC时间。
+
+* 热更新、热替换HMR
+  * 热更新的粒度更加细致，实现技术难度更高

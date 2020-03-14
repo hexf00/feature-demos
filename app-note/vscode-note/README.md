@@ -1,5 +1,9 @@
 # VSCODE 使用笔记
 
+## 调试功能
+
+* [debugging#_launch-configurations](https://code.visualstudio.com/docs/editor/debugging#_launch-configurations)
+
 ## 快捷键
 
 * 快速折叠代码块

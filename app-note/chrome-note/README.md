@@ -1,5 +1,7 @@
 # chrome使用笔记
 
+* [devtool 文档](https://developer.chrome.com/devtools)
+
 ## 快捷键
 
 * 实现在相邻的标签页前后切换
