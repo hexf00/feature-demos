@@ -1,5 +1,21 @@
 # VSCODE 使用笔记
 
+## lint功能
+
+* 添加下面代码可以让编辑器再保存时候自动格式化代码和检查。
+
+  ```json
+      "eslint.enable": true, // 是否开启检测
+      "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": true
+      },
+  ```
+
+  注：旧版本的配置项是`eslint.autoFixOnSave`,已经 不再使用了，
+
+  * [vscode-eslint](https://github.com/microsoft/vscode-eslint#settings-migration)
+  * [vscode eslint插件](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+
 ## 调试功能
 
 * [debugging#_launch-configurations](https://code.visualstudio.com/docs/editor/debugging#_launch-configurations)

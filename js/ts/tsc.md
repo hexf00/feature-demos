@@ -1,5 +1,8 @@
 # ts
 
+* 2020 tslint不再维护，由eslint统一管理 ,[来源](https://github.com/palantir/tslint/issues/4534)
+  * [vscode-eslint](https://github.com/microsoft/vscode-eslint#settings-migration)
+
 * **编译器参考文档**
   * [compiler-options](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
   * [编译选项](https://www.tslang.cn/docs/handbook/compiler-options.html)
