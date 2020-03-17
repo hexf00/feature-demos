@@ -31,7 +31,9 @@
 
 ## 参考资料
 
-- [可视化了解一下？ ECharts 4.0 最全技术攻略](https://www.infoq.cn/article/baidu-echarts-4.0-strategy)
+- ppt 分享，比论文更细节一点 [可视化了解一下？ ECharts 4.0 最全技术攻略](https://www.infoq.cn/article/baidu-echarts-4.0-strategy)
+
+  - [浙大论文](https://www.sciencedirect.com/science/article/pii/S2468502X18300068#fig5)
 
 - [ECharts4 差异](https://juejin.im/post/5a5da932f265da3e591e4901)
 
@@ -98,3 +100,18 @@
 ## 其它
 
 - [浙江大学可视分析小组博客](http://www.cad.zju.edu.cn/home/vagblog/)
+
+## 性能优化
+
+- [appendData](https://www.echartsjs.com/zh/api.html#echartsInstance.appendData)
+  - 在大数据量（百万以上）的渲染场景，appendData 接口提供了**分片加载**后**增量渲染**的能力，渲染新加入的数据块时不会清除原有已经渲染的部分。
+  - 可通过`progressive: 0`关闭渐进式渲染
+  - dataset 不支持渐进式渲染
+  - 支持的版本有
+    - 基础版本
+      - 散点图（scatter）
+      - 线图（lines）
+    - GL
+      - 散点图（scatterGL）
+      - 线图（linesGL）
+      - 可视化建筑群（polygons3D）
