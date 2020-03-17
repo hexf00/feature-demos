@@ -1,4 +1,8 @@
-# vue-tsx
+# jsx
+
+- jsx 上面不能打断点，因为 jsx 会被编译为 h 函数
+
+## vue+tsx
 
 - innerHTML
 
