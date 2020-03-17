@@ -28,6 +28,11 @@
 // @ts-check
 ```
 
+## watch
+
+- `-w` 配合`outDir` 和 `rootDir`使用
+- `--watch`
+
 ## tsconfig 详解
 
 和大多数程序一样，比如 wget、webpack，tsc 可以以命令行的方式接收参数，也可以从配置文件中读取参数，写在配置文件的参数显然时更加易于管理的，但需要注意可能存在一些参数只能在配置文件中使用。
@@ -39,9 +44,17 @@
     - 替代品 `noImplicitThis: true`
 
 - 配置后可以 使用 webpack tree-shake 特性
-  - "module": "es2015"
-    - 配置成 commonjs，热加载会失效
+
+  - "module"
+
+    - 指 ts 代码输出时候模块语法使用哪一种规范
+      - 这个输出是没有 polyfill 实现的，所以还需要对应的类库配合
+    - 配置成 es2015 和 esnext 才能使 webpack 的热加载生效
+    - 实测发现不管哪个导出格式都没有办法直接在浏览器中以 script 使用
+      - 已测试 require.js+amd
+
   - "moduleResolution": "node"
     - 如果不配置，会提示找不到 node_modules 的类库
+
 - noImplicitAny 有 any 时报错
 - lib 添加哪些新语法支持
