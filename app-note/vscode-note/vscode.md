@@ -42,6 +42,13 @@
 ## 插件
 
 - es6-string-html 便于使用古老的方式开发 [template_strings @MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/template_strings)
+- Code Runner
+- Debugger for Chrome
+- ESLint
+- GitLensmarkdownlint
+- Prettier
+  - 不使用与 vsc 冲突的功能
+- vetur
 
 ## 杂项
 
