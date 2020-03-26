@@ -164,7 +164,27 @@
 
 ## sourcemap
 
-- [convert-source-map](https://github.com/thlorenz/convert-source-map)
-  - 解析 base64 注释的 sourcemap
-- [source-map-file-export](https://github.com/ufologist/source-map-file-export)
-  - 读取 Source Map 文件, 导出其中的源码文件
+- sourcemap 当于是源码文件集合，主要用途是完成压缩代码和源码之间的映射，映射原理是使用文件、行号、词汇之间的关系进行映射。
+
+  - [JavaScript Source Map 详解](http://www.ruanyifeng.com/blog/2013/01/javascript_source_map.html)
+
+  - file：转换后的文件名。
+
+  - sourceRoot：转换前的文件目录。如果与转换前的文件在同一目录，该项为空。
+
+  - sources：转换前的文件数组，即原始代码。
+
+  - names：转换前的所有变量名和属性名，映射用途。
+
+  - mappings：记录位置信息的字符串，映射用途。
+
+- 相关项目
+
+  - [unsource](https://github.com/cscape/unsource)
+  - [reverse-sourcemap-tool](https://github.com/lunnlew/reverse-sourcemap-tool)
+  - [shuji](https://github.com/paazmaya/shuji)
+
+  - [convert-source-map](https://github.com/thlorenz/convert-source-map)
+    - 解析 base64 注释的
+  - [source-map-file-export](https://github.com/ufologist/source-map-file-export)
+    - 读取 Source Map 文件, 导出其中的源码文件
