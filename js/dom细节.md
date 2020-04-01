@@ -26,3 +26,10 @@ move(){
 如果是实现图标的拖拽则不应该使用passive，会导致preventDefault无效，反而不能阻止滚动。
 
 应用场景：vconsole
+
+
+[白话解释 Javascript事件preventDefault,stopPropagation及return false的区别](https://segmentfault.com/a/1190000008227026)
+
+[passive的作用和原理](https://blog.csdn.net/w993263495/article/details/85009761)
+
+https://segmentfault.com/a/1190000008227026
