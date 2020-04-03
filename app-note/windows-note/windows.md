@@ -14,3 +14,5 @@
 ## 抓包工具
 
 - fiddler
+
+[Fiddler不显示RequestMethod，看不到请求类型get/post解决方法](https://blog.csdn.net/wanglijia26/article/details/89519542)
