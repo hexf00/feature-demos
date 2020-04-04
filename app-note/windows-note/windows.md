@@ -16,3 +16,10 @@
 - fiddler
 
 [Fiddler不显示RequestMethod，看不到请求类型get/post解决方法](https://blog.csdn.net/wanglijia26/article/details/89519542)
+
+- fiddler可以自定义过滤请求，包括状态码，域名。
+- 可以mock请求
+- 可以拦截请求并添加跨域请求头
+- 可以自定义菜单
+- 可以修改包并发送
+- 导出的格式可以在vscode的rest client中直接使用
