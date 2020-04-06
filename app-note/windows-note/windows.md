@@ -25,3 +25,4 @@
 - 导出的格式可以在vscode的rest client中直接使用
 - 可以抓包https，需要安装证书
 - 可以抓包移动端，需要配置局域网代理
+- android 7开始 app可以选择不信任用户区的证书，导致无法抓包https，如微信，解决方案是使用android 6 或者将证书安装到root区
