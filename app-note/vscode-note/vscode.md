@@ -49,6 +49,7 @@
 - Prettier
   - 不使用与 vsc 冲突的功能
 - vetur
+- rest-client
 
 ## 杂项
 

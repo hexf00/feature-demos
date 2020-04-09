@@ -27,9 +27,12 @@ move(){
 
 应用场景：vconsole
 
+- 捕获模式(capturing) ,又称为“滴流模式”(trickling)
+
+- 冒泡模式(bubbling)
+
+可以改变事件的触发顺序。
 
 [白话解释 Javascript事件preventDefault,stopPropagation及return false的区别](https://segmentfault.com/a/1190000008227026)
 
 [passive的作用和原理](https://blog.csdn.net/w993263495/article/details/85009761)
-
-https://segmentfault.com/a/1190000008227026
