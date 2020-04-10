@@ -1,7 +1,7 @@
 # windows 使用笔记
 
- - 添加网络位置可以是一个很好的ftp客户端
- - 可以将文件夹映射为盘符，好像是一个命令
+- 添加网络位置可以是一个很好的 ftp 客户端
+- 可以将文件夹映射为盘符，好像是一个命令
 
 ## 画图 3d 使用笔记
 
@@ -13,19 +13,3 @@
 - 画图 3D 工程文件目录 `C:\Users\用户\AppData\Local\Packages\Microsoft.MSPaint_8wekyb3d8bbwe\LocalState\Projects`
 
 - 使用 chocolatey 安装和管理 win 的软件
-
-## 抓包工具
-
-- fiddler
-
-[Fiddler不显示RequestMethod，看不到请求类型get/post解决方法](https://blog.csdn.net/wanglijia26/article/details/89519542)
-
-- fiddler可以自定义过滤请求，包括状态码，域名。
-- 可以mock请求
-- 可以拦截请求并添加跨域请求头
-- 可以自定义菜单
-- 可以修改包并发送
-- 导出的格式可以在vscode的rest client中直接使用
-- 可以抓包https，需要安装证书
-- 可以抓包移动端，需要配置局域网代理
-- android 7开始 app可以选择不信任用户区的证书，导致无法抓包https，如微信，解决方案是使用android 6 或者将证书安装到root区
