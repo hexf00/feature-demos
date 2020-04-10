@@ -12,8 +12,6 @@
 
 - 添加下面代码可以让编辑器再保存时候自动格式化代码和检查。
 
-  45454
-
   ```json
       "eslint.enable": true, // 是否开启检测
       "editor.codeActionsOnSave": {
