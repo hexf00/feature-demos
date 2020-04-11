@@ -13,6 +13,12 @@
 
 本文默认是基于 新版本
 
+## 路由
+
+- 使用锚链接则路由参数也需要在锚链接中
+- 使用 history 模式则服务器需要配置 rewrite，路由参数在 query，重写避免入口文件不存在导致的 404
+- [HTML5 History 模式 后端配置例子](https://router.vuejs.org/zh/guide/essentials/history-mode.html#%E5%90%8E%E7%AB%AF%E9%85%8D%E7%BD%AE%E4%BE%8B%E5%AD%90)
+
 ## 安装
 
 - `vue ui` 启动可视化界面管理项目
