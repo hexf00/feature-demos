@@ -10,7 +10,8 @@
   - 可以创建 mode
 
 - postman 提供 console，可以在菜单和左下角状态栏图标找到
-- Test 内脚本表示结束后执行
+- [支持请求前后脚本](https://learning.postman.com/docs/postman/scripts/pre-request-scripts/)
+  - Test 内脚本表示结束后执行
 - 支持全局变量
 
 ```js
