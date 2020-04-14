@@ -14,3 +14,5 @@
   - 热更新的粒度更加细致，实现技术难度更高
 
 - [译 JavaScript️ 可视化：js 引擎](https://juejin.im/post/5e23c3195188254dc3198b2d)
+
+- [解构赋值](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
