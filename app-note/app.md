@@ -22,3 +22,6 @@
 - 目录可以映射称为盘符
   - `subst O: C:\Users\admin\OneDrive\TEST`
   - O 是盘符
+- Sandboxie
+  - 合理利用沙盘限制流氓软件的操作
+  - [如何看待百度网盘默认开启加入用户激励计划，在用户不知情的情况下上传文件？](https://www.zhihu.com/question/388835247/answer/1166760742)
