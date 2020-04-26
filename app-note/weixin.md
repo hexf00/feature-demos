@@ -17,6 +17,7 @@
     - 在提交审核后设置一个时间可以无登录授权
 
 - webview 与小程序之间的通信
+
   - url，query，锚链接
     - 应该为安全数据
   - webview 中 iframe 只能是业务域名的 URL
@@ -26,9 +27,12 @@
 
   - [小程序内用户帐号登录规范调整和优化建议官方](https://developers.weixin.qq.com/community/operate/doc/000640bb8441b82900e89f48351401)
     - 有推荐和不合规的登录案例
+      - 授权需要由用户手动触发
+      - 不能暗示或者明示用户必须要允许授权
     - 服务范围特定是指没有对外开放注册，例如教务系统、公司员工考勤系统等特定服务范围。相反地，完全对外开放注册的，且注册后即可通过小程序体验更多线上服务的，属于服务范围开放。
+
 - wx.login()
-  - 会导致上一个 session_code 失效，所以应该wx.checkSession()确认code失效后再调用wx.login
+  - 会导致上一个 session_code 失效，所以应该 wx.checkSession()确认 code 失效后再调用 wx.login
   - code 有效期是不固定的，用户使用越多则有效期会自动被更新
   - 代码
     ```js
