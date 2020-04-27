@@ -28,6 +28,8 @@
 // @ts-check
 ```
 
+- TS6133 noUnusedLocals 设置为 false 后 忽略未使用的变量报错
+
 ## watch
 
 - `-w` 配合`outDir` 和 `rootDir`使用

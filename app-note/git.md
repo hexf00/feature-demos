@@ -35,3 +35,7 @@
 - git gui
   - 可以看到可视化的图表
 - gitlens vsc 插件
+
+## ignore
+
+- gitignore 忽略子目录下所有某后缀的文件 `**/*.js`
