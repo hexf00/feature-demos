@@ -82,4 +82,9 @@
   - 包含多种图示案例
 - 如果正式版本和体验版本使用不同 api，可能会出现切换时 token 失效的原因，触发流程是先登录小程序体验版，再切换到正式版本会提示接口异常，原因是正式版和体验版使用了相同的缓存。
 
+- webview
+  - [postMessage 只会在特定时机（小程序后退、组件销毁、分享）触发并收到消息。e.detail = { data }，data 是多次 postMessage 的参数组成的数组](https://developers.weixin.qq.com/miniprogram/dev/component/web-view.html)
+    - postMessage 数据需要放在 data key 中 ，否则获取不到
+  - 调试在 web-view 点右键
+
 ## 框架
