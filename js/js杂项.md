@@ -16,3 +16,5 @@
 - [译 JavaScript️ 可视化：js 引擎](https://juejin.im/post/5e23c3195188254dc3198b2d)
 
 - [解构赋值](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+
+- [使用 forEach、some、every、find、findIndex 的正确姿势](https://www.jianshu.com/p/91d740ad0ab9)
