@@ -18,3 +18,18 @@ fiddler 是一个可以使用 js 和 c#进行拓展的抓包工具
 
 - postman 不能识别相同的两行相同的响应头，会导致出问题，fiddler 可以
 - 选择不捕捉 https 则浏览器也不会使用 fiddler 的根证书
+
+
+## 竞品
+- charles 收费
+- whistle
+  - 安装证书的时候需要手动选择“受信任的根证书颁发机构”，否则证书将不会生效
+  - fiddler与竞品不同的是
+    - Fiddler 除了添加了根证书的信任，还会动态地生成 HTTPS 个人证书。whistle则不会
+      - certmgr.msc 中个人 可查看
+
+
+## 调试器
+
+- vconsole
+- eruda 比vconsole更强大，功能接近chrome dev tools
