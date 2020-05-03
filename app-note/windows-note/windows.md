@@ -13,3 +13,5 @@
 - 画图 3D 工程文件目录 `C:\Users\用户\AppData\Local\Packages\Microsoft.MSPaint_8wekyb3d8bbwe\LocalState\Projects`
 
 - 使用 chocolatey 安装和管理 win 的软件
+- Windwos 更新出错时候 检查 服务 Windows Update 是否被关闭
+  - Win10 更新时出现错误 0x80070422 和 0x8024001e
