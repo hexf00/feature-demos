@@ -1,7 +1,7 @@
 # app
 
-* listary 可以搜索列表，自动定位文件夹
-* pc.qq.com 下载软件很快，没有广告
+- listary 可以搜索列表，自动定位文件夹
+- pc.qq.com 下载软件很快，没有广告
 - postman
   - eolinker
   - swagger
@@ -12,7 +12,7 @@
   - everedit
   - vscode
 - Proxifier
-  - 非http也走代理
+  - 非 http 也走代理
   - [请问下 Proxifier 的原理是什么?](https://www.zhihu.com/question/37610676?sort=created)
 - Cpuz
 - Smsniff
@@ -25,3 +25,5 @@
 - Sandboxie
   - 合理利用沙盘限制流氓软件的操作
   - [如何看待百度网盘默认开启加入用户激励计划，在用户不知情的情况下上传文件？](https://www.zhihu.com/question/388835247/answer/1166760742)
+- 友盟
+  - 站长之家 统计
