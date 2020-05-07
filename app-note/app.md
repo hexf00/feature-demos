@@ -29,3 +29,7 @@
   - 站长之家 统计
   - 支持 web、app、小程序统计
   - 支持自定义事件，允许 3 个自定义字段
+    - [自定义统计](https://open.cnzz.com/a/new/trackevent/)
+    - [数据结构](https://open.cnzz.com/a/api/trackevent/)
+    - [案例](https://open.cnzz.com/a/new/trackevent/2013/0806/2.html#a_0)
+  - 统计代码 包裹在 `<div style="display:none"></div>` 即可实现隐藏
