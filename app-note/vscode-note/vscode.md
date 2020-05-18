@@ -48,6 +48,11 @@
   - 不使用与 vsc 冲突的功能
 - vetur
 - rest-client
+- [vscode-drawio](https://github.com/hediet/vscode-drawio)
+  - 在vscode中画流程图，并且可以编辑xml的代码，直接修改文字
+  - plantuml / graphviz /mermaid/ flowchat等语言是绘图或许是更好的选择
+    - 这样可以不用关系具体的布局
+    - 其中语雀已经支持
 
 ## 杂项
 
