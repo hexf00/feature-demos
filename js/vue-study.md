@@ -1,81 +1,87 @@
-# vue笔记
+# vue 笔记
 
-* prop,data 可以是一个类,但是会被监听
-* [$createElement()](https://cn.vuejs.org/v2/guide/render-function.html#createElement-%E5%8F%82%E6%95%B0) 用来创建Dom,可以被更方便的JSX代替
+- prop,data 可以是一个类,但是会被监听
+- [\$createElement()](https://cn.vuejs.org/v2/guide/render-function.html#createElement-%E5%8F%82%E6%95%B0) 用来创建 Dom,可以被更方便的 JSX 代替
+  - 如果是多个元素则可以使用数组，嵌套在第二个参数，可以在 prop 中传值
+  - [createElement 参数详解](https://blog.csdn.net/a460550542/article/details/90600008)
 
 ## 使用细节
 
-* 不能直接在data上增加属性，即不允许动态添加根级响应式属性。
-  * [参考](https://segmentfault.com/q/1010000008472683)
+- 不能直接在 data 上增加属性，即不允许动态添加根级响应式属性。
+  - [参考](https://segmentfault.com/q/1010000008472683)
 
 ## 组件与数据流、响应式
 
-* 在往一个响应式对象上添加新属性时需要使用vue.set方法
-  * 因为普通方式追加新属性，不会触发vue的响应式，注：已有属性的改变是会触发的
-* **如果watch的对象引用不发生改变，则$emit不会导致watch被触发**
-  * 场景：上层传递对象给下层输入控件修改
-  * 细节：如果上层传递的是数组，则子组件中push、splice操作后，无需$emit就会导致watch被触发
-    * 细节： 修改数组中的对象的值不会导致watch被触发
-    * 如果上层没有传递，是undefined，则子组件中push、splice操作，会触发watch，但因为没有$emit，也没有引用，所以上层依然不能拿到组件更改后的数据
-  * 总结：watch用于监听上层数据的改变
+- 在往一个响应式对象上添加新属性时需要使用 vue.set 方法
+  - 因为普通方式追加新属性，不会触发 vue 的响应式，注：已有属性的改变是会触发的
+- **如果 watch 的对象引用不发生改变，则\$emit 不会导致 watch 被触发**
 
-* 如果子组件只需要传值，不需要校验，能不能直接**使用对象的引用特性**直接改变上层数据，可以提升性能？
-  * 场景：输入控件
-  * 导致两个问题
-  
-    1. **上层必须传递值**，不能传递null和undefined，否则就算当前组件初始化了一个默认值，因为上层没有引用的缘故，无法完成响应式，**依然需要使用$emit通知上层更新**
-    2. **上层必须保证引用不丢失**，data函数只会在组件初始化时候执行一次，引用丢失时会导致上层数据改变无法通知到当前组件，无法完成响应式，**则依然需要手工watch**
+  - 场景：上层传递对象给下层输入控件修改
+  - 细节：如果上层传递的是数组，则子组件中 push、splice 操作后，无需\$emit 就会导致 watch 被触发
+    - 细节： 修改数组中的对象的值不会导致 watch 被触发
+    - 如果上层没有传递，是 undefined，则子组件中 push、splice 操作，会触发 watch，但因为没有\$emit，也没有引用，所以上层依然不能拿到组件更改后的数据
+  - 总结：watch 用于监听上层数据的改变
 
-       * 改变了整个数据会导致引用丢失
-       * `JSON.parse(JSON.stringify())` 会导致引用丢失
+- 如果子组件只需要传值，不需要校验，能不能直接**使用对象的引用特性**直接改变上层数据，可以提升性能？
+
+  - 场景：输入控件
+  - 导致两个问题
+
+    1. **上层必须传递值**，不能传递 null 和 undefined，否则就算当前组件初始化了一个默认值，因为上层没有引用的缘故，无法完成响应式，**依然需要使用\$emit 通知上层更新**
+    2. **上层必须保证引用不丢失**，data 函数只会在组件初始化时候执行一次，引用丢失时会导致上层数据改变无法通知到当前组件，无法完成响应式，**则依然需要手工 watch**
+
+       - 改变了整个数据会导致引用丢失
+       - `JSON.parse(JSON.stringify())` 会导致引用丢失
 
 ## 组件
 
-* mixins 选项合并组件,可以将公共方法放在一起
-  * [mixins @Vue](https://cn.vuejs.org/v2/guide/mixins.html)
-* data方法只会在组件初始化时候运行一次,更新数据不会重复触发data方法
-* [Msgbox的实现 @element](https://github.com/ElemeFE/element/blob/059448bf7dee7200c3413cf9d4546fd442e63de7/packages/message-box/src/main.js#L17)
-  
+- mixins 选项合并组件,可以将公共方法放在一起
+  - [mixins @Vue](https://cn.vuejs.org/v2/guide/mixins.html)
+- data 方法只会在组件初始化时候运行一次,更新数据不会重复触发 data 方法
+- [Msgbox 的实现 @element](https://github.com/ElemeFE/element/blob/059448bf7dee7200c3413cf9d4546fd442e63de7/packages/message-box/src/main.js#L17)
+
   ```js
   var msgbox = new component(el: document.createElement('div')) ;
   document.body.appendChild(msgbox.$el);
   ```
 
-  * [notification的实现 @element](https://github.com/ElemeFE/element/blob/ec3326e0bc7e30d2da8ecea21732eff09726ed7f/packages/notification/src/main.js)
-    * 原理 其它动态组件也可以这么实现
+  - [notification 的实现 @element](https://github.com/ElemeFE/element/blob/ec3326e0bc7e30d2da8ecea21732eff09726ed7f/packages/notification/src/main.js)
+
+    - 原理 其它动态组件也可以这么实现
 
       ```js
       //注册全局方法
-      function Notification(){
+      function Notification() {
         //动态示例化组件
-        instance = new Component()
+        instance = new Component();
         instance.$mount();
         //追加到dom
         document.body.appendChild(instance.$el);
       }
       ```
 
-* 组件之间如何传递dom
-  * solt
-  * [$createElement](https://www.jianshu.com/p/84cd41a5009c)
-    * 相比solt方式，可以以代码的形式传递dom，直接传递文本是存在问题的
+- 组件之间如何传递 dom
+  - solt
+  - [\$createElement](https://www.jianshu.com/p/84cd41a5009c)
+    - 相比 solt 方式，可以以代码的形式传递 dom，直接传递文本是存在问题的
 
 ## 刷新路由组件的方法
 
-* v-if 方法是刷新
-  * `this.load = false;this.$nextTick(() => (this.load = true))`
+- v-if 方法是刷新
 
-* url加时间戳，且需要配置router-view的key
-* router.go(0) 会导致静态资源被重新请求
-  * window.location.reload() 类似
-* vm.$router.replace() 调用两次，第一次访问不存在的url，第二次访问当前URL
-* 进入一个不存在的页面，router.go(-1)再返回上一页
+  - `this.load = false;this.$nextTick(() => (this.load = true))`
+
+- url 加时间戳，且需要配置 router-view 的 key
+- router.go(0) 会导致静态资源被重新请求
+  - window.location.reload() 类似
+- vm.\$router.replace() 调用两次，第一次访问不存在的 url，第二次访问当前 URL
+- 进入一个不存在的页面，router.go(-1)再返回上一页
 
 ## vue-router
 
-* [Vue Router @vuejs](https://router.vuejs.org/zh/)
-* `Vue.use(VueRouter)`, `script` 标签方式无须手动安装
-* 注册
+- [Vue Router @vuejs](https://router.vuejs.org/zh/)
+- `Vue.use(VueRouter)`, `script` 标签方式无须手动安装
+- 注册
 
 ```js
 const app = new Vue({
@@ -119,3 +125,4 @@ const app = new Vue({
     * 从其它路由进入不会触发beforeRouteUpdate，而是触发beforeRouteEnter
     * 重复进入要重置数据后再初始化数据(可以代码复用),或者直接更新数据(需要写两套代码)
   * `beforeRouteLeave(to, from, next)` 导航离开时的调用
+```

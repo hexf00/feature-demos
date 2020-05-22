@@ -18,3 +18,5 @@
 - [解构赋值](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 
 - [使用 forEach、some、every、find、findIndex 的正确姿势](https://www.jianshu.com/p/91d740ad0ab9)
+
+- ios 中将日期格式转为 date 对象，需要把`-`替换为为`/`
