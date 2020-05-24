@@ -29,7 +29,7 @@
     "direction": "vertical",
     "children": [
       {
-        "id": "6c610a1fddee7439",
+        "id": "9e99bd49add4a0c0",
         "type": "leaf",
         "dimension": null,
         "active": true,
@@ -37,7 +37,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "双向链接.md",
+            "file": "3.Resources/PARA.md",
             "mode": "source"
           }
         }
