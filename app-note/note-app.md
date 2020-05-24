@@ -25,3 +25,4 @@
   - 插件 backlink 可实现双向链
   - 插件 graph overview 可实现 graph overview
 - zettlr
+- Zettelkasten

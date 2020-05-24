@@ -6,14 +6,16 @@
     "Graph view": true,
     "Backlinks": true,
     "Command palette": true,
-    "Markdown format importer": true,
+    "Markdown format importer": false,
     "Word count": true,
     "Tag pane": true,
     "Daily notes": true,
     "Starred": true,
     "Custom CSS": true,
     "Slides": true,
-    "Open with default app": true
+    "Open with default app": true,
+    "Page preview": true,
+    "Audio recorder": false
   },
   "isSidebarCollapsed": false,
   "isRightSidedockCollapsed": false,
@@ -27,14 +29,17 @@
     "direction": "vertical",
     "children": [
       {
-        "id": "feac9a11ed47ded3",
+        "id": "6c610a1fddee7439",
         "type": "leaf",
         "dimension": null,
         "active": true,
         "master": "",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "双向链接.md",
+            "mode": "source"
+          }
         }
       }
     ]
@@ -50,7 +55,7 @@
   "useTab": false,
   "sideDockWidth": {
     "left": 300,
-    "right": 147
+    "right": 341
   },
   "hotkeys": {
     "command-palette:open": [
