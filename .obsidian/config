@@ -7,7 +7,13 @@
     "Backlinks": true,
     "Command palette": true,
     "Markdown format importer": true,
-    "Word count": true
+    "Word count": true,
+    "Tag pane": true,
+    "Daily notes": true,
+    "Starred": true,
+    "Custom CSS": true,
+    "Slides": true,
+    "Open with default app": true
   },
   "isSidebarCollapsed": false,
   "isRightSidedockCollapsed": false,
@@ -21,22 +27,51 @@
     "direction": "vertical",
     "children": [
       {
-        "id": "e088065902dfab8f",
+        "id": "feac9a11ed47ded3",
         "type": "leaf",
         "dimension": null,
         "active": true,
         "master": "",
         "state": {
-          "type": "empty",
+          "type": "graph",
           "state": {}
         }
       }
     ]
   },
   "lastOpenFiles": [
+    "Obsidian的使用体验.md",
     "Obsidian Help/Release notes/v0.4.0.md",
     "embedding.md",
     "Obsidian Help/Obsidian.md"
   ],
-  "fileSortOrder": "alphabetical"
+  "fileSortOrder": "alphabetical",
+  "alwaysUpdateLinks": true,
+  "useTab": false,
+  "sideDockWidth": {
+    "left": 300,
+    "right": 147
+  },
+  "hotkeys": {
+    "command-palette:open": [
+      {
+        "modifiers": [
+          "Mod",
+          "Shift"
+        ],
+        "key": "P"
+      }
+    ],
+    "switcher:open": [
+      {
+        "modifiers": [
+          "Mod"
+        ],
+        "key": "p"
+      }
+    ]
+  },
+  "showLineNumber": false,
+  "foldIndent": true,
+  "foldHeading": true
 }
