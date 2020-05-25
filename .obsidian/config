@@ -20,7 +20,7 @@
   "isSidebarCollapsed": false,
   "isRightSidedockCollapsed": false,
   "lastOpenSidebarTab": "File explorer",
-  "lastOpenRightSidedockTab": "Tags",
+  "lastOpenRightSidedockTab": "Backlinks",
   "theme": "obsidian",
   "workspaceLayout": {
     "id": "aedd222eccbbedb9",
@@ -29,48 +29,26 @@
     "direction": "vertical",
     "children": [
       {
-        "id": "cd63eaee9896d8c6",
-        "type": "split",
+        "id": "9e99bd49add4a0c0",
+        "type": "leaf",
         "dimension": null,
-        "direction": "horizontal",
-        "children": [
-          {
-            "id": "9e99bd49add4a0c0",
-            "type": "leaf",
-            "dimension": 26.934673366834172,
-            "active": false,
-            "master": "",
-            "state": {
-              "type": "graph",
-              "state": {
-                "pinned": true
-              }
-            }
-          },
-          {
-            "id": "23f61c97fd6e3d1d",
-            "type": "leaf",
-            "dimension": 73.06532663316582,
-            "active": true,
-            "master": "",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "diary/2020-05-25.md",
-                "mode": "source"
-              }
-            }
+        "active": true,
+        "master": "",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "diary/2020-05-25.md",
+            "mode": "source"
           }
-        ]
+        }
       }
     ]
   },
   "lastOpenFiles": [
-    "js/dom细节.md",
-    "双向链接.md",
-    "3.Resources/PARA.md",
     "Obsidian的使用体验.md",
-    "Obsidian Help/Release notes/v0.4.0.md"
+    "Obsidian Help/Release notes/v0.4.0.md",
+    "embedding.md",
+    "Obsidian Help/Obsidian.md"
   ],
   "fileSortOrder": "alphabetical",
   "alwaysUpdateLinks": true,
