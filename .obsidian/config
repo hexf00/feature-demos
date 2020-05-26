@@ -29,7 +29,7 @@
     "direction": "vertical",
     "children": [
       {
-        "id": "9e99bd49add4a0c0",
+        "id": "6f2db6539fdf09e8",
         "type": "leaf",
         "dimension": null,
         "active": true,
@@ -37,7 +37,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "diary/2020-05-25.md",
+            "file": "css/css.md",
             "mode": "source"
           }
         }
@@ -45,10 +45,11 @@
     ]
   },
   "lastOpenFiles": [
+    "使用VSCode+Github管理笔记.md",
     "Obsidian的使用体验.md",
+    "diary/2020-05-25.md",
     "Obsidian Help/Release notes/v0.4.0.md",
-    "embedding.md",
-    "Obsidian Help/Obsidian.md"
+    "embedding.md"
   ],
   "fileSortOrder": "alphabetical",
   "alwaysUpdateLinks": true,

@@ -16,6 +16,7 @@
         - Ctrl+O 打开文件 改为 Ctrl+P
 -  开启list折叠功能
 -  好在配置文件是可编辑的，且属于具体项目，不需要在不同电脑上反复的重新配置
+-  配置.gitignore中不监听`.obsidian/cache`
 
 ## 不足
 - 没有集成Git

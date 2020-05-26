@@ -1,4 +1,5 @@
-# css
+- `text-overflow: string` 自定义省略号内容只支持火狐
+- `flex`布局和`absolute`布局之间存在冲突 #待验证 
 
 ## 双行省略显示
 

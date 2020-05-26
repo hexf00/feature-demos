@@ -1,0 +1,2 @@
+- [[静态方法]] 需要装饰器 `@staticmethod`
+- [[类方法]] 需要装饰器 `@classmethod`
