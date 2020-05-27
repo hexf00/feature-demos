@@ -18,7 +18,7 @@
 - Smsniff
 - Ssr
 - Bypass 抢票
-- aria2
+- [[aria2]]
 - 目录可以映射称为盘符
   - `subst O: C:\Users\admin\OneDrive\TEST`
   - O 是盘符
