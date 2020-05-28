@@ -19,7 +19,7 @@
   },
   "isSidebarCollapsed": false,
   "isRightSidedockCollapsed": false,
-  "lastOpenSidebarTab": "Search in files",
+  "lastOpenSidebarTab": "File explorer",
   "lastOpenRightSidedockTab": "Backlinks",
   "theme": "obsidian",
   "workspaceLayout": {
@@ -37,7 +37,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "diary/2020-05-27.md",
+            "file": "diary/2020-05-28.md",
             "mode": "source"
           }
         }
@@ -45,11 +45,11 @@
     ]
   },
   "lastOpenFiles": [
+    "diary/2020-05-27.md",
     "使用VSCode+Github管理笔记.md",
     "Obsidian的使用体验.md",
     "diary/2020-05-25.md",
-    "Obsidian Help/Release notes/v0.4.0.md",
-    "embedding.md"
+    "Obsidian Help/Release notes/v0.4.0.md"
   ],
   "fileSortOrder": "alphabetical",
   "alwaysUpdateLinks": true,
