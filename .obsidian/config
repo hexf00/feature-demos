@@ -20,7 +20,7 @@
   "isSidebarCollapsed": false,
   "isRightSidedockCollapsed": false,
   "lastOpenSidebarTab": "File explorer",
-  "lastOpenRightSidedockTab": "Backlinks",
+  "lastOpenRightSidedockTab": "Tags",
   "theme": "obsidian",
   "workspaceLayout": {
     "id": "aedd222eccbbedb9",
@@ -29,7 +29,7 @@
     "direction": "vertical",
     "children": [
       {
-        "id": "6f2db6539fdf09e8",
+        "id": "35c9c9c96d95a19c",
         "type": "leaf",
         "dimension": null,
         "active": true,
@@ -37,7 +37,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "diary/2020-05-28.md",
+            "file": "diary/2020-05-29.md",
             "mode": "source"
           }
         }
@@ -45,11 +45,11 @@
     ]
   },
   "lastOpenFiles": [
-    "diary/2020-05-27.md",
-    "使用VSCode+Github管理笔记.md",
-    "Obsidian的使用体验.md",
-    "diary/2020-05-25.md",
-    "Obsidian Help/Release notes/v0.4.0.md"
+    "diary/2020-05-29.md",
+    "3.Resources/PARA.md",
+    "python.md",
+    "diary/2020-05-28.md",
+    "diary/2020-05-27.md"
   ],
   "fileSortOrder": "alphabetical",
   "alwaysUpdateLinks": true,
