@@ -32,3 +32,9 @@
      - 已经完成/停止的项目
      - 不再维持的责任
      - 失去兴趣的资源
+
+- IPGIA
+  - Inbox
+  - Projects
+  - Goals
+  - Interest
