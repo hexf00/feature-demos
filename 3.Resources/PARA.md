@@ -37,4 +37,5 @@
   - Inbox
   - Projects
   - Goals
-  - Interest
+  - Interests
+  - Archives
