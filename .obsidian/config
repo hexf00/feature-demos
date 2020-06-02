@@ -37,7 +37,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "diary/2020-06-01.md",
+            "file": "diary/2020-06-02.md",
             "mode": "source"
           }
         }
@@ -45,11 +45,11 @@
     ]
   },
   "lastOpenFiles": [
+    "diary/2020-06-02.md",
     "diary/2020-06-01.md",
     "双向链接.md",
     "jquery.md",
-    "3.Resources/PARA.md",
-    "README.md"
+    "3.Resources/PARA.md"
   ],
   "fileSortOrder": "alphabetical",
   "alwaysUpdateLinks": true,
