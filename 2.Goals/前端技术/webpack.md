@@ -199,7 +199,7 @@
     * babel-loader也可以从`.babelrc`配置文件中读取配置
   * 需要注意，node_modules
 * ts-loader
-  * 依赖项 typescript
+  * 依赖项 [[typescript]]
   * ts的配置不再ts-loader中，需要放在tsconfig.json
   * 详细配置查看ts-loader文档
 * html-loader
