@@ -1,18 +1,19 @@
-## 参考
-- [PARA Starter Kit](https://forum.obsidian.md/t/para-starter-kit/223)
+- [The PARA Method: A Universal System for Organizing Digital Information](https://fortelabs.co/blog/para/)
 - 基于actionability（主观上的可执行程度），而不是客观意义的分类
     - 比如说 紧急/不紧急，重要/不重要
-- 保持3层目录结构，便于记忆和导航
+- Projecct	
 
 0) Inbox 收集箱
-    - 非必须
+    - 未归类
 2) Projects 项目
     - 要完成什么？
     - 花费时间最多
     - 任务
     - **有最后期限**
     - 如果完成需要关闭
+    - 完全可执行的
 3) Areas 责任区域
+    - 目标
     - 要维持什么？
     - 非项目
     - 需要长期努力
