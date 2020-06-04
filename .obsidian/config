@@ -18,7 +18,7 @@
     "Audio recorder": false
   },
   "isSidebarCollapsed": false,
-  "isRightSidedockCollapsed": false,
+  "isRightSidedockCollapsed": true,
   "lastOpenSidebarTab": "File explorer",
   "lastOpenRightSidedockTab": "Backlinks",
   "theme": "obsidian",
@@ -29,7 +29,7 @@
     "direction": "vertical",
     "children": [
       {
-        "id": "174b648f60a0f01b",
+        "id": "aae1e68fdc18fa9a",
         "type": "leaf",
         "dimension": null,
         "active": true,
@@ -37,7 +37,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "diary/2020-06-03.md",
+            "file": "0.Diaries/2020-06-04.md",
             "mode": "source"
           }
         }
@@ -45,11 +45,11 @@
     ]
   },
   "lastOpenFiles": [
-    "diary/2020-06-03.md",
-    "diary/2020-06-02.md",
-    "diary/2020-06-01.md",
-    "双向链接.md",
-    "jquery.md"
+    "0.Diaries/2020-06-04.md",
+    "0.Diaries/2020-06-01.md",
+    "0.Diaries/2020-06-02.md",
+    "0.Diaries/2020-05-24.md",
+    "0.Diaries/2020-05-25.md"
   ],
   "fileSortOrder": "alphabetical",
   "alwaysUpdateLinks": true,
