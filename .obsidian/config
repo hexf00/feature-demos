@@ -37,7 +37,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "0.Diaries/2020-06-08.md",
+            "file": "0.Diaries/2020-06-09.md",
             "mode": "source"
           }
         }
@@ -45,11 +45,11 @@
     ]
   },
   "lastOpenFiles": [
+    "0.Diaries/2020-06-09.md",
     "0.Diaries/2020-06-08.md",
     "app-note/aria2.md",
     "0.Diaries/2020-06-05.md",
-    "0.Diaries/2020-06-04.md",
-    "0.Diaries/2020-06-01.md"
+    "0.Diaries/2020-06-04.md"
   ],
   "fileSortOrder": "alphabetical",
   "alwaysUpdateLinks": true,
