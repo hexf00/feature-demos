@@ -29,27 +29,24 @@
     "direction": "vertical",
     "children": [
       {
-        "id": "4073e8d01b45e4a8",
+        "id": "bf58b5898bd82e1d",
         "type": "leaf",
         "dimension": null,
         "active": true,
         "master": "",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "0.Diaries/2020-06-09.md",
-            "mode": "source"
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ]
   },
   "lastOpenFiles": [
+    "Taro使用笔记.md",
+    "0.Diaries/2020-06-10.md",
     "0.Diaries/2020-06-09.md",
     "0.Diaries/2020-06-08.md",
-    "app-note/aria2.md",
-    "0.Diaries/2020-06-05.md",
-    "0.Diaries/2020-06-04.md"
+    "app-note/aria2.md"
   ],
   "fileSortOrder": "alphabetical",
   "alwaysUpdateLinks": true,
