@@ -35,18 +35,21 @@
         "active": true,
         "master": "",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "0.Diaries/2020-06-11.md",
+            "mode": "source"
+          }
         }
       }
     ]
   },
   "lastOpenFiles": [
-    "Taro使用笔记.md",
-    "0.Diaries/2020-06-10.md",
-    "0.Diaries/2020-06-09.md",
-    "0.Diaries/2020-06-08.md",
-    "app-note/aria2.md"
+    "0.Diaries/2020-06-11.md",
+    "js/g6-study/note.md",
+    "js/ts/ts.md",
+    "js/eslint.md",
+    "js/ts-study/README.md"
   ],
   "fileSortOrder": "alphabetical",
   "alwaysUpdateLinks": true,

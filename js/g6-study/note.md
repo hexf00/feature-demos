@@ -11,7 +11,7 @@
   layoutController.workerData = {};
   ```
 
-* `JSON.stringify(obj,null,2)` JSON序列化的时候同时格式化，美化缩进
+* `JSON.stringify(obj,null,2)` [[JSON]]序列化的时候同时[[格式化]]，美化缩进
 * `edge.getModel()` 有不同的实现，如果`.get('model')`无法JSON序列化
 * `graph.addItem` 方法不会重新布局，应该要提供x,y信息
 * `graph.removeItem` 删除node会删除与node关联的edge
