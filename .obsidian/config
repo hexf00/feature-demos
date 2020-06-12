@@ -19,7 +19,7 @@
   },
   "isSidebarCollapsed": false,
   "isRightSidedockCollapsed": true,
-  "lastOpenSidebarTab": "Search in files",
+  "lastOpenSidebarTab": "File explorer",
   "lastOpenRightSidedockTab": "Backlinks",
   "theme": "obsidian",
   "workspaceLayout": {
@@ -37,7 +37,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "0.Diaries/2020-06-11.md",
+            "file": "0.Diaries/2020-06-12.md",
             "mode": "source"
           }
         }
@@ -45,11 +45,11 @@
     ]
   },
   "lastOpenFiles": [
+    "0.Diaries/2020-06-12.md",
     "0.Diaries/2020-06-11.md",
     "js/g6-study/note.md",
     "js/ts/ts.md",
-    "js/eslint.md",
-    "js/ts-study/README.md"
+    "js/eslint.md"
   ],
   "fileSortOrder": "alphabetical",
   "alwaysUpdateLinks": true,
