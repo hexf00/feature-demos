@@ -18,7 +18,7 @@
     "Audio recorder": false
   },
   "isSidebarCollapsed": false,
-  "isRightSidedockCollapsed": true,
+  "isRightSidedockCollapsed": false,
   "lastOpenSidebarTab": "File explorer",
   "lastOpenRightSidedockTab": "Backlinks",
   "theme": "obsidian",
@@ -29,7 +29,7 @@
     "direction": "vertical",
     "children": [
       {
-        "id": "bf58b5898bd82e1d",
+        "id": "35c9c9c96d95a19c",
         "type": "leaf",
         "dimension": null,
         "active": true,
@@ -37,7 +37,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "0.Diaries/2020-06-12.md",
+            "file": "0.Diaries/2020-06-13.md",
             "mode": "source"
           }
         }
@@ -45,18 +45,18 @@
     ]
   },
   "lastOpenFiles": [
-    "0.Diaries/2020-06-12.md",
-    "0.Diaries/2020-06-11.md",
-    "js/g6-study/note.md",
+    "0.Diaries/2020-06-13.md",
+    "1.Projects/QPT业务梳理/QPT业务梳理.md",
+    "app-note/npm.md",
     "js/ts/ts.md",
-    "js/eslint.md"
+    "js/ts/tsc.md"
   ],
   "fileSortOrder": "alphabetical",
   "alwaysUpdateLinks": true,
   "useTab": false,
   "sideDockWidth": {
-    "left": 300,
-    "right": 341
+    "left": 333,
+    "right": 395
   },
   "hotkeys": {
     "command-palette:open": [
