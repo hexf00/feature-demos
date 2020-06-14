@@ -19,7 +19,7 @@
   },
   "isSidebarCollapsed": false,
   "isRightSidedockCollapsed": false,
-  "lastOpenSidebarTab": "File explorer",
+  "lastOpenSidebarTab": "Search in files",
   "lastOpenRightSidedockTab": "Backlinks",
   "theme": "obsidian",
   "workspaceLayout": {
@@ -47,9 +47,9 @@
   "lastOpenFiles": [
     "0.Diaries/2020-06-14.md",
     "1.Projects/QPT业务梳理/QPT业务梳理.md",
-    "0.Diaries/2020-06-13.md",
-    "app-note/npm.md",
-    "js/ts/ts.md"
+    "airtable.md",
+    "0.Diaries/2020-06-05.md",
+    "0.Diaries/2020-06-13.md"
   ],
   "fileSortOrder": "alphabetical",
   "alwaysUpdateLinks": true,
