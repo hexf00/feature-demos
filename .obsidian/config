@@ -11,7 +11,7 @@
     "Tag pane": true,
     "Daily notes": true,
     "Starred": true,
-    "Custom CSS": true,
+    "Custom CSS": false,
     "Slides": true,
     "Open with default app": true,
     "Page preview": true,
@@ -25,31 +25,28 @@
   "workspaceLayout": {
     "id": "aedd222eccbbedb9",
     "type": "split",
-    "dimension": null,
-    "direction": "vertical",
     "children": [
       {
-        "id": "35c9c9c96d95a19c",
+        "id": "9ccebd5c3cbf5380",
         "type": "leaf",
-        "dimension": null,
         "active": true,
-        "master": "",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "0.Diaries/2020-06-14.md",
+            "file": "0.Diaries/2020-06-15.md",
             "mode": "source"
           }
         }
       }
-    ]
+    ],
+    "direction": "vertical"
   },
   "lastOpenFiles": [
-    "0.Diaries/2020-06-14.md",
-    "1.Projects/QPT业务梳理/QPT业务梳理.md",
-    "airtable.md",
-    "0.Diaries/2020-06-05.md",
-    "0.Diaries/2020-06-13.md"
+    "0.Diaries/2020-06-15.md",
+    "zhihu.md",
+    "Roam Research.md",
+    "使用VSCode+Github管理笔记.md",
+    "4.Archives/日记归档/202005/2020-05-24.md"
   ],
   "fileSortOrder": "alphabetical",
   "alwaysUpdateLinks": true,
@@ -75,9 +72,111 @@
         ],
         "key": "p"
       }
+    ],
+    "app:go-back": [
+      {
+        "modifiers": [
+          "Alt"
+        ],
+        "key": "ArrowLeft"
+      }
+    ],
+    "app:go-forward": [
+      {
+        "modifiers": [
+          "Alt"
+        ],
+        "key": "ArrowRight"
+      }
     ]
   },
   "showLineNumber": false,
   "foldIndent": true,
-  "foldHeading": true
+  "foldHeading": true,
+  "leftSidedock": {
+    "id": "61d4abe2afeea373",
+    "type": "split",
+    "children": [
+      {
+        "id": "8fedb5dda3038a54",
+        "type": "tabs",
+        "dimension": 68.07692307692308,
+        "children": [
+          {
+            "id": "d35228d395d60693",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "d8a34b9713848de4",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {}
+            }
+          },
+          {
+            "id": "ad249d7c8df2ca31",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "67bfc7e92f963f91",
+        "type": "tabs",
+        "dimension": 32.05128205128205,
+        "children": [
+          {
+            "id": "d806609cc1d889c7",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 152
+  },
+  "rightSidedock": {
+    "id": "c76e0a911a7c225e",
+    "type": "split",
+    "children": [
+      {
+        "id": "74d360fad5a155f4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "33133762adce42c9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {}
+            }
+          },
+          {
+            "id": "24697d83b4c0e8ec",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 319
+  },
+  "readableLineLength": true
 }
