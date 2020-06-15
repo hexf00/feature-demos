@@ -33,7 +33,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "0.Diaries/2020-06-15.md",
+            "file": "0.Diaries/2020-06-16.md",
             "mode": "source"
           }
         }
@@ -42,11 +42,11 @@
     "direction": "vertical"
   },
   "lastOpenFiles": [
+    "0.Diaries/2020-06-16.md",
     "0.Diaries/2020-06-15.md",
     "zhihu.md",
     "Roam Research.md",
-    "使用VSCode+Github管理笔记.md",
-    "4.Archives/日记归档/202005/2020-05-24.md"
+    "使用VSCode+Github管理笔记.md"
   ],
   "fileSortOrder": "alphabetical",
   "alwaysUpdateLinks": true,
