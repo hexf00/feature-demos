@@ -90,7 +90,7 @@
       }
     ]
   },
-  "showLineNumber": false,
+  "showLineNumber": true,
   "foldIndent": true,
   "foldHeading": true,
   "leftSidedock": {
