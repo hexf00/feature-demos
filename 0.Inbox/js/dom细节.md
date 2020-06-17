@@ -34,6 +34,6 @@ move(){
 
 [白话解释 Javascript 事件 preventDefault,stopPropagation 及 return false 的区别](https://segmentfault.com/a/1190000008227026)
 
-[passive 的作用和原理](https://blog.csdn.net/w993263495/article/details/85009761)
+[passive 的作用和原理](https://blog.CSDN.net/w993263495/article/details/85009761)
 
-- addEventListener与removeEventListener  第三个参数   是不是要保持一样 #待验证
+- addEventListener 与 removeEventListener 第三个参数 是不是要保持一样 #待验证

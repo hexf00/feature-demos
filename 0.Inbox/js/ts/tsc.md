@@ -13,7 +13,7 @@
 - 建立一个.d.ts
   - 在 tsconfig 的 file 引入
     - 需要注意的是这个文件必须要有`export {}`
-      - [参考](https://blog.csdn.net/n6308/article/details/103236093)
+      - [参考](https://blog.CSDN.net/n6308/article/details/103236093)
 
 ## 屏蔽注释
 

@@ -27,23 +27,26 @@
     "type": "split",
     "children": [
       {
-        "id": "41a6b7eb9f15c1e0",
+        "id": "2c4d8130bbd6ef99",
         "type": "leaf",
         "active": true,
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "0.Inbox/0.Diary/2020-06-17.md",
+            "mode": "source"
+          }
         }
       }
     ],
     "direction": "vertical"
   },
   "lastOpenFiles": [
-    "0.Inbox/0.Diary/2020-06-16.md",
-    "0.Diaries/2020-06-16.md",
-    "0.Diaries/2020-06-15.md",
-    "zhihu.md",
-    "Roam Research.md"
+    "0.Inbox/0.Diary/2020-06-17.md",
+    "0.Inbox/jquery.md",
+    "2.Goals/Programming/IOC.md",
+    "test.md",
+    "4.Archives/日记归档/202005/2020-05-24.md"
   ],
   "fileSortOrder": "alphabetical",
   "alwaysUpdateLinks": true,
@@ -87,7 +90,7 @@
       }
     ]
   },
-  "showLineNumber": true,
+  "showLineNumber": false,
   "foldIndent": true,
   "foldHeading": true,
   "leftSidedock": {
@@ -123,7 +126,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "67bfc7e92f963f91",
@@ -168,12 +172,12 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 319
+    "width": 871,
+    "collapsed": true
   },
   "readableLineLength": true
 }

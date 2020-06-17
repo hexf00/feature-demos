@@ -3,7 +3,7 @@
 - prop,data 可以是一个类,但是会被监听
 - [\$createElement()](https://cn.vuejs.org/v2/guide/render-function.html#createElement-%E5%8F%82%E6%95%B0) 用来创建 Dom,可以被更方便的 JSX 代替
   - 如果是多个元素则可以使用数组，嵌套在第二个参数，可以在 prop 中传值
-  - [createElement 参数详解](https://blog.csdn.net/a460550542/article/details/90600008)
+  - [createElement 参数详解](https://blog.CSDN.net/a460550542/article/details/90600008)
 
 ## 使用细节
 
