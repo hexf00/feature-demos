@@ -11,14 +11,14 @@
     "Tag pane": true,
     "Daily notes": true,
     "Starred": true,
-    "Custom CSS": true,
+    "Custom CSS": false,
     "Slides": true,
     "Open with default app": true,
     "Page preview": true,
     "Audio recorder": false
   },
   "isSidebarCollapsed": false,
-  "isRightSidedockCollapsed": true,
+  "isRightSidedockCollapsed": false,
   "lastOpenSidebarTab": "Search in files",
   "lastOpenRightSidedockTab": "Backlinks",
   "theme": "obsidian",
@@ -27,7 +27,7 @@
     "type": "split",
     "children": [
       {
-        "id": "bf58b5898bd82e1d",
+        "id": "9ccebd5c3cbf5380",
         "type": "leaf",
         "active": true,
         "state": {
@@ -43,17 +43,17 @@
   },
   "lastOpenFiles": [
     "0.Diaries/2020-06-16.md",
-    "Taro使用笔记.md",
-    "0.Diaries/2020-06-10.md",
-    "0.Diaries/2020-06-12.md",
-    "0.Diaries/2020-06-11.md"
+    "0.Diaries/2020-06-15.md",
+    "zhihu.md",
+    "Roam Research.md",
+    "使用VSCode+Github管理笔记.md"
   ],
   "fileSortOrder": "alphabetical",
   "alwaysUpdateLinks": true,
   "useTab": false,
   "sideDockWidth": {
-    "left": 300,
-    "right": 341
+    "left": 333,
+    "right": 395
   },
   "hotkeys": {
     "command-palette:open": [
@@ -72,21 +72,38 @@
         ],
         "key": "p"
       }
+    ],
+    "app:go-back": [
+      {
+        "modifiers": [
+          "Alt"
+        ],
+        "key": "ArrowLeft"
+      }
+    ],
+    "app:go-forward": [
+      {
+        "modifiers": [
+          "Alt"
+        ],
+        "key": "ArrowRight"
+      }
     ]
   },
-  "showLineNumber": false,
+  "showLineNumber": true,
   "foldIndent": true,
   "foldHeading": true,
   "leftSidedock": {
-    "id": "e896677ea34f5fe6",
+    "id": "61d4abe2afeea373",
     "type": "split",
     "children": [
       {
-        "id": "69aeb9b6184cf335",
+        "id": "8fedb5dda3038a54",
         "type": "tabs",
+        "dimension": 68.07692307692308,
         "children": [
           {
-            "id": "aeb4a166b27379d6",
+            "id": "d35228d395d60693",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -94,7 +111,7 @@
             }
           },
           {
-            "id": "47b335cd491cfc76",
+            "id": "d8a34b9713848de4",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -102,7 +119,7 @@
             }
           },
           {
-            "id": "2472dcb98265fe45",
+            "id": "ad249d7c8df2ca31",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -110,32 +127,17 @@
             }
           }
         ]
-      }
-    ],
-    "direction": "horizontal",
-    "width": 300
-  },
-  "rightSidedock": {
-    "id": "34f85c71882e6560",
-    "type": "split",
-    "children": [
+      },
       {
-        "id": "ce290cab5f37349a",
+        "id": "67bfc7e92f963f91",
         "type": "tabs",
+        "dimension": 32.05128205128205,
         "children": [
           {
-            "id": "2846260ee49af14e",
+            "id": "d806609cc1d889c7",
             "type": "leaf",
             "state": {
-              "type": "backlink",
-              "state": {}
-            }
-          },
-          {
-            "id": "34cbbc3826acb380",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
+              "type": "graph",
               "state": {}
             }
           }
@@ -143,7 +145,38 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
-  }
+    "width": 152
+  },
+  "rightSidedock": {
+    "id": "c76e0a911a7c225e",
+    "type": "split",
+    "children": [
+      {
+        "id": "74d360fad5a155f4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "33133762adce42c9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {}
+            }
+          },
+          {
+            "id": "24697d83b4c0e8ec",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 319
+  },
+  "readableLineLength": true
 }
