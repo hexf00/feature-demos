@@ -33,7 +33,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "0.Inbox/0.Diary/2020-06-17.md",
+            "file": "0.Inbox/0.Diary/2020-06-18.md",
             "mode": "source"
           }
         }
@@ -42,11 +42,11 @@
     "direction": "vertical"
   },
   "lastOpenFiles": [
+    "0.Inbox/0.Diary/2020-06-18.md",
     "0.Inbox/0.Diary/2020-06-17.md",
     "0.Inbox/jquery.md",
     "2.Goals/Programming/IOC.md",
-    "test.md",
-    "4.Archives/日记归档/202005/2020-05-24.md"
+    "test.md"
   ],
   "fileSortOrder": "alphabetical",
   "alwaysUpdateLinks": true,
