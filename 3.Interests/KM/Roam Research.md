@@ -1,0 +1,2 @@
+ - roam Research 的愿景是替代书籍，直接分发知识网络，减少知识传递的成本。
+ - [Roam Research Report ——理念与功能](https://sspai.com/post/60588)

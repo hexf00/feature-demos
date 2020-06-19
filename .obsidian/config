@@ -27,7 +27,7 @@
     "type": "split",
     "children": [
       {
-        "id": "2c4d8130bbd6ef99",
+        "id": "9ccebd5c3cbf5380",
         "type": "leaf",
         "active": true,
         "state": {
@@ -43,10 +43,10 @@
   },
   "lastOpenFiles": [
     "0.Inbox/0.Diary/2020-06-17.md",
-    "0.Inbox/jquery.md",
-    "2.Goals/Programming/IOC.md",
-    "test.md",
-    "4.Archives/日记归档/202005/2020-05-24.md"
+    "0.Inbox/app-note/frp.md",
+    "2.Goals/KM/Obsidian.md",
+    "2.Goals/KM/Roam Research.md",
+    "0.Inbox/Obsidian.md"
   ],
   "fileSortOrder": "alphabetical",
   "alwaysUpdateLinks": true,
@@ -100,7 +100,7 @@
       {
         "id": "8fedb5dda3038a54",
         "type": "tabs",
-        "dimension": 67.98975672215109,
+        "dimension": 68.07692307692308,
         "children": [
           {
             "id": "d35228d395d60693",
@@ -126,13 +126,12 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "67bfc7e92f963f91",
         "type": "tabs",
-        "dimension": 32.01024327784891,
+        "dimension": 32.05128205128205,
         "children": [
           {
             "id": "d806609cc1d889c7",
@@ -146,7 +145,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 219
+    "width": 250
   },
   "rightSidedock": {
     "id": "c76e0a911a7c225e",
@@ -172,12 +171,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 871,
-    "collapsed": true
+    "width": 319
   },
-  "readableLineLength": true
+  "readableLineLength": false
 }
