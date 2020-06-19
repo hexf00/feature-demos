@@ -43,10 +43,10 @@
   },
   "lastOpenFiles": [
     "0.Inbox/0.Diary/2020-06-18.md",
-    "0.Inbox/0.Diary/2020-06-17.md",
-    "0.Inbox/jquery.md",
-    "2.Goals/Programming/IOC.md",
-    "test.md"
+    "0.Inbox/0.Diary/2020-06-19.md",
+    "4.Archives/日记归档/202005/2020-05-27.md",
+    "4.Archives/日记归档/202005/2020-05-28.md",
+    "4.Archives/日记归档/202005/2020-05-29.md"
   ],
   "fileSortOrder": "alphabetical",
   "alwaysUpdateLinks": true,
@@ -126,8 +126,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "67bfc7e92f963f91",
@@ -176,8 +175,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 871,
-    "collapsed": true
+    "width": 616
   },
   "readableLineLength": true
 }
