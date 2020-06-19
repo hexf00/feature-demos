@@ -33,7 +33,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "0.Inbox/0.Diary/2020-06-17.md",
+            "file": "0.Inbox/0.Diary/2020-06-18.md",
             "mode": "source"
           }
         }
@@ -42,11 +42,11 @@
     "direction": "vertical"
   },
   "lastOpenFiles": [
-    "0.Inbox/0.Diary/2020-06-17.md",
-    "0.Inbox/app-note/frp.md",
-    "2.Goals/KM/Obsidian.md",
-    "2.Goals/KM/Roam Research.md",
-    "0.Inbox/Obsidian.md"
+    "0.Inbox/0.Diary/2020-06-18.md",
+    "0.Inbox/0.Diary/2020-06-19.md",
+    "4.Archives/日记归档/202005/2020-05-27.md",
+    "4.Archives/日记归档/202005/2020-05-28.md",
+    "4.Archives/日记归档/202005/2020-05-29.md"
   ],
   "fileSortOrder": "alphabetical",
   "alwaysUpdateLinks": true,
@@ -176,7 +176,11 @@
       }
     ],
     "direction": "horizontal",
+<<<<<<< HEAD
     "width": 319
+=======
+    "width": 616
+>>>>>>> c8bdbe5b4a22b09c23343c197d8d072b5ef1676a
   },
   "readableLineLength": false
 }
