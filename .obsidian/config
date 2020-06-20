@@ -27,13 +27,13 @@
     "type": "split",
     "children": [
       {
-        "id": "9ccebd5c3cbf5380",
+        "id": "1f96f0eb610d48e1",
         "type": "leaf",
         "active": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "0.Inbox/0.Diary/2020-06-18.md",
+            "file": "0.Inbox/0.Diary/2020-06-20.md",
             "mode": "source"
           }
         }
@@ -42,11 +42,11 @@
     "direction": "vertical"
   },
   "lastOpenFiles": [
+    "0.Inbox/0.Diary/2020-06-20.md",
     "0.Inbox/0.Diary/2020-06-18.md",
     "0.Inbox/0.Diary/2020-06-19.md",
     "4.Archives/日记归档/202005/2020-05-27.md",
-    "4.Archives/日记归档/202005/2020-05-28.md",
-    "4.Archives/日记归档/202005/2020-05-29.md"
+    "4.Archives/日记归档/202005/2020-05-28.md"
   ],
   "fileSortOrder": "alphabetical",
   "alwaysUpdateLinks": true,
@@ -100,7 +100,7 @@
       {
         "id": "8fedb5dda3038a54",
         "type": "tabs",
-        "dimension": 68.07692307692308,
+        "dimension": 67.98975672215109,
         "children": [
           {
             "id": "d35228d395d60693",
@@ -131,7 +131,7 @@
       {
         "id": "67bfc7e92f963f91",
         "type": "tabs",
-        "dimension": 32.05128205128205,
+        "dimension": 32.01024327784891,
         "children": [
           {
             "id": "d806609cc1d889c7",
@@ -176,11 +176,8 @@
       }
     ],
     "direction": "horizontal",
-<<<<<<< HEAD
-    "width": 319
-=======
-    "width": 616
->>>>>>> c8bdbe5b4a22b09c23343c197d8d072b5ef1676a
+    "width": 616,
+    "collapsed": true
   },
   "readableLineLength": false
 }
