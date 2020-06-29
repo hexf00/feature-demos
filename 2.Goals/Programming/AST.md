@@ -1,2 +1,5 @@
 - 实用AST来处理代码，正解，比字符串强太多
 - 如果代码解释错误，则应该先手工将代码优化正确
+- [AST Explorer](https://astexplorer.net/)
+  - 没有py的ast
+  - ast有环境变量分析的功能
