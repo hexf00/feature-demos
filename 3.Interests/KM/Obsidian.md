@@ -1,0 +1,1 @@
+- [从卡片链接到大脑联想，基于 Obsidian 的卡片盒笔记法实践](https://sspai.com/post/60802)

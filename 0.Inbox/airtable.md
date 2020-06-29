@@ -16,3 +16,5 @@ AirtableError {
             - 可以汇总关联字段，先rollup，再去除重复。
     - Formula rollup都支持公式
     - 每个字段类型上面都有帮助
+
+- airtable很适合处理1000行以内的数据

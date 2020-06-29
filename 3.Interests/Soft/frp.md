@@ -1,5 +1,3 @@
-# frp
-
 - [使用 frp 进行内网穿透](https://sspai.com/post/52523)
 - teamview 5938 端口直联
   - teamview 的效果大大好于 anyview
@@ -16,3 +14,5 @@ local_ip = 需要被转发的本地服务器的地址，127.0.0.1
 local_port = 本地服务器要转发的端口
 remote_port = 中继服务器的开放端口
 ```
+
+- [用开源免费的内网穿透工具 frp，实现远程桌面和文件传输](https://sspai.com/post/60852)

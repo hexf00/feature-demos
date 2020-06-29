@@ -1,0 +1,2 @@
+- [Notion：笔记和知识管理](https://www.zhihu.com/question/386607609/answer/1144965063)
+- [Notion 背后的先锋](https://linmi.cc/9593.html)
