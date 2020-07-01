@@ -27,13 +27,13 @@
     "type": "split",
     "children": [
       {
-        "id": "1f96f0eb610d48e1",
+        "id": "1aa25fae3df9ffc0",
         "type": "leaf",
         "active": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "0.Inbox/0.Diary/2020-06-21.md",
+            "file": "0.Inbox/0.Diary/2020-07-01.md",
             "mode": "source"
           }
         }
@@ -42,11 +42,11 @@
     "direction": "vertical"
   },
   "lastOpenFiles": [
-    "0.Inbox/0.Diary/2020-06-21.md",
-    "0.Inbox/0.Diary/2020-06-20.md",
-    "3.Interests/KM/Roam Research.md",
-    "3.Interests/KM/PARA.md",
-    "0.Inbox/Notion.md"
+    "0.Inbox/0.Diary/2020-07-01.md",
+    "0.Inbox/README.md",
+    "0.Inbox/0.Diary/2020-06-30.md",
+    "0.Inbox/0.Diary/2020-06-01.md",
+    "0.Inbox/0.Diary/2020-06-02.md"
   ],
   "fileSortOrder": "alphabetical",
   "alwaysUpdateLinks": true,
@@ -100,7 +100,6 @@
       {
         "id": "8fedb5dda3038a54",
         "type": "tabs",
-        "dimension": 67.98975672215109,
         "children": [
           {
             "id": "d35228d395d60693",
@@ -126,27 +125,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
-      },
-      {
-        "id": "67bfc7e92f963f91",
-        "type": "tabs",
-        "dimension": 32.01024327784891,
-        "children": [
-          {
-            "id": "d806609cc1d889c7",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
-            }
-          }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 250
+    "width": 255
   },
   "rightSidedock": {
     "id": "c76e0a911a7c225e",
