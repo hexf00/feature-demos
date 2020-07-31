@@ -22,32 +22,6 @@
   "lastOpenSidebarTab": "Search in files",
   "lastOpenRightSidedockTab": "Backlinks",
   "theme": "obsidian",
-  "workspaceLayout": {
-    "id": "aedd222eccbbedb9",
-    "type": "split",
-    "children": [
-      {
-        "id": "1aa25fae3df9ffc0",
-        "type": "leaf",
-        "active": true,
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "0.Inbox/0.Diary/2020-07-10.md",
-            "mode": "source"
-          }
-        }
-      }
-    ],
-    "direction": "vertical"
-  },
-  "lastOpenFiles": [
-    "0.Inbox/0.Diary/2020-07-10.md",
-    "0.Inbox/0.Diary/2020-07-08.md",
-    "0.Inbox/0.Diary/2020-07-03.md",
-    "0.Inbox/0.Diary/2020-07-02.md",
-    "4.Archives/日记归档/202005/2020-05-24.md"
-  ],
   "fileSortOrder": "alphabetical",
   "alwaysUpdateLinks": true,
   "useTab": false,
@@ -93,74 +67,5 @@
   "showLineNumber": false,
   "foldIndent": true,
   "foldHeading": true,
-  "leftSidedock": {
-    "id": "61d4abe2afeea373",
-    "type": "split",
-    "children": [
-      {
-        "id": "8fedb5dda3038a54",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "d35228d395d60693",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {}
-            }
-          },
-          {
-            "id": "d8a34b9713848de4",
-            "type": "leaf",
-            "state": {
-              "type": "search",
-              "state": {}
-            }
-          },
-          {
-            "id": "ad249d7c8df2ca31",
-            "type": "leaf",
-            "state": {
-              "type": "starred",
-              "state": {}
-            }
-          }
-        ]
-      }
-    ],
-    "direction": "horizontal",
-    "width": 255
-  },
-  "rightSidedock": {
-    "id": "c76e0a911a7c225e",
-    "type": "split",
-    "children": [
-      {
-        "id": "74d360fad5a155f4",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "33133762adce42c9",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {}
-            }
-          },
-          {
-            "id": "24697d83b4c0e8ec",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {}
-            }
-          }
-        ],
-        "currentTab": 1
-      }
-    ],
-    "direction": "horizontal",
-    "width": 162.40000915527344
-  },
   "readableLineLength": false
 }

@@ -1,0 +1,97 @@
+{
+  "main": {
+    "id": "aedd222eccbbedb9",
+    "type": "split",
+    "children": [
+      {
+        "id": "34fb3b006febd71d",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "0.Inbox/0.Diary/2020-07-31.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "61d4abe2afeea373",
+    "type": "split",
+    "children": [
+      {
+        "id": "8fedb5dda3038a54",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d35228d395d60693",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "d8a34b9713848de4",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {}
+            }
+          },
+          {
+            "id": "ad249d7c8df2ca31",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 493
+  },
+  "right": {
+    "id": "c76e0a911a7c225e",
+    "type": "split",
+    "children": [
+      {
+        "id": "74d360fad5a155f4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "33133762adce42c9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {}
+            }
+          },
+          {
+            "id": "24697d83b4c0e8ec",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 517
+  },
+  "lastOpenFiles": [
+    "0.Inbox/0.Diary/2020-07-31.md",
+    "chrome插件.md",
+    "0.Inbox/0.Diary/2020-07-27.md",
+    "0.Inbox/0.Diary/2020-07-23.md",
+    "0.Inbox/0.Diary/2020-07-22.md"
+  ]
+}
