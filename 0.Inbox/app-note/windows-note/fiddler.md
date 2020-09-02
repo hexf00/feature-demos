@@ -32,3 +32,31 @@ fiddler 是一个可以使用 js 和 c#进行拓展的抓包工具
 
 - vconsole
 - eruda 比 vconsole 更强大，功能接近 chrome dev tools
+
+
+## 改掉坏习惯，不逐字逐句的看报错信息。
+```bash
+
+    static function OnBeforeResponse(oSession: Session) {
+        if (m_Hide304s && oSession.responseCode == 304) {
+            oSession["ui-hide"] = "true";
+        }
+		if (oSession.oResponse.headers.Exists('Access-Control-Allow-Origin')) {
+			oSession.oResponse.headers['Access-Control-Allow-Origin'] = '*';
+		} else {
+			oSession.oResponse.headers.Add('Access-Control-Allow-Origin', '*');
+		}
+		
+		if (oSession.oResponse.headers.Exists('Access-Control-Allow-Headers')) {
+			oSession.oResponse.headers['Access-Control-Allow-Headers'] = 'token';
+		} else {
+			oSession.oResponse.headers.Add('Access-Control-Allow-Headers', 'token');
+		}
+    }
+```
+
+```text
+Access to XMLHttpRequest at 'https://url' from origin 'http://192.168.5.205:8080' has been blocked by CORS policy: Request header field token is not allowed by Access-Control-Allow-Headers in preflight response.
+xhr.js:172 POST https://url net::ERR_FAILED
+```
+
