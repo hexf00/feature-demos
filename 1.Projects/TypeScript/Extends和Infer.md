@@ -62,6 +62,7 @@ type AB_a = AB extends { name: "a" } ? true : false //false
 type AB_ab = AB extends { name: "a" | "b" } ? true : false //true
 
 // 函数与联合类型参数函数的 extends 关系，与类型相反
+// 详细见 TypeScript 协变和逆变关系
 type FnA_FnAB = FnA extends FnAB ? true : false //false
 type FnAB_FnA = FnAB extends FnA ? true : false //true
 
