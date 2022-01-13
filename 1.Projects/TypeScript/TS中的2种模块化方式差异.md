@@ -26,4 +26,26 @@ interface Y3 {
 结论:
 
 1. 类型定义 不能访问 module，可以使用 namespace 访问
-2. 名字空间、类型、值  是三种不同的存在。 所以不能出现 类型和值、名字空间 为同一个名称
+2. 名字空间、类型、值  是三种不同的存在。 
+
+
+------------
+
+
+```ts
+class Z { }
+
+namespace N {
+  export const ZZ = Z
+  export type ZZ = Z
+}
+
+const z = new N.ZZ() //Z
+
+interface Y {
+  z1: N.ZZ //Z
+  z2: InstanceType<typeof N.ZZ>; //Z
+}
+```
+
+总结： namesapce中允许同名的类型和值
